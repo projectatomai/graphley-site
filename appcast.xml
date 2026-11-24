@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Graphley</title>
+        <item>
+            <title>0.1.0</title>
+            <pubDate>Tue, 24 Nov 2026 14:12:13 -0500</pubDate>
+            <link>https://graphley.ai</link>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<p>First release of Graphley for Mac.</p>
+]]></description>
+            <enclosure url="https://graphley.ai/downloads/Graphley-0.1.0.dmg" length="1972474" type="application/octet-stream" sparkle:edSignature="Z8qkNJN5950/9jZejC+5Sn8YPqy59beHzXkoDIJqSal/ybDZfgglk9jlN3IO/NNjdF9exjdjpO+/eir5YOEuCw=="/>
+        </item>
+    </channel>
+</rss>
