@@ -3,15 +3,15 @@
     <channel>
         <title>Graphley</title>
         <item>
-            <title>0.1.3</title>
-            <pubDate>Tue, 24 Nov 2026 18:07:01 -0500</pubDate>
+            <title>0.1.4</title>
+            <pubDate>Tue, 24 Nov 2026 18:19:55 -0500</pubDate>
             <link>https://graphley.ai</link>
-            <sparkle:version>5</sparkle:version>
-            <sparkle:shortVersionString>0.1.3</sparkle:shortVersionString>
+            <sparkle:version>6</sparkle:version>
+            <sparkle:shortVersionString>0.1.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<p>A redesigned Graphley: new icon, our own buttons and controls, Settings inside the app, add your App Store Connect key right in Sources &amp; keys, choose your Google Analytics sites without an agent, and correct 90-day comparisons.</p>
+            <description><![CDATA[<p>Drag sites in the sidebar into any order you like. Your iPhone shows the same order.</p>
 ]]></description>
-            <enclosure url="https://graphley.ai/downloads/Graphley-0.1.3.dmg" length="3009452" type="application/octet-stream" sparkle:edSignature="ipYm9GTSqH+XGlrKj8Kw6DEDECCcDHEvOMPga9N0aWUNi3SHZwFgqO/qv78EOItx41msmnvFg8qb/PPMgdU+AQ=="/>
+            <enclosure url="https://graphley.ai/downloads/Graphley-0.1.4.dmg" length="3043663" type="application/octet-stream" sparkle:edSignature="EGLOfG3Ib9qzD/gRDCgkp3MKbKxIL08nCBleAylS/1tB2Je6/phvgP/RHx5fdWNKUQ1nCLu/bpsV2hqzRHZBAg=="/>
         </item>
     </channel>
 </rss>
