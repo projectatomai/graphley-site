@@ -2,7 +2,7 @@
 // Tells IndexNow which pages changed in this deploy, so Bing (and the assistants that
 // search through it, such as Copilot and ChatGPT) re-read them within minutes instead of days.
 //
-// It runs at the end of a Vercel build. For every URL in the built sitemap it compares the
+// It runs at the end of a Cloudflare Pages build. For every URL in the built sitemap it compares the
 // page's words (title, description, structured data and visible text) with the page that is
 // live right now, and submits only the pages that differ, plus pages that were added or removed.
 // With --lastmod it also writes <lastmod> into the built sitemap: today for a changed page,
@@ -18,7 +18,7 @@ import { join } from 'node:path';
 
 const KEY = '66365049776433ceca35572e03fca658';
 const ENDPOINT = process.env.INDEXNOW_ENDPOINT || 'https://api.indexnow.org/indexnow';
-const mode = process.env.VERCEL_ENV; // production | preview | undefined (local)
+const mode = process.env.VERCEL_ENV || (process.env.CF_PAGES ? (process.env.CF_PAGES_BRANCH === 'main' ? 'production' : 'preview') : undefined); // production | preview | undefined (local)
 
 const args = process.argv.slice(2);
 const withLastmod = args.includes('--lastmod');

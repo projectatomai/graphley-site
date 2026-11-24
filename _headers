@@ -1,0 +1,14 @@
+/*
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/downloads/*
+  Content-Disposition: attachment
+  Content-Type: application/x-apple-diskimage
+
+/appcast.xml
+  Content-Type: application/rss+xml; charset=utf-8
+  Cache-Control: public, max-age=300

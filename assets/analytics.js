@@ -31,7 +31,7 @@
 
   // Safari (above all on iPhone) deletes what page scripts save, localStorage and script cookies alike,
   // after 7 days without a visit, so the banner came back. The choice is also kept in a cookie the server
-  // sets (vercel.json, /analytics-consent.gif), which Safari keeps for the cookie's full lifetime.
+  // sets (functions/analytics-consent.gif.js), which Safari keeps for the cookie's full lifetime.
   function cookieChoice() {
     const match = document.cookie.match(/(?:^|;\s*)analytics_consent=(granted|denied)(?:;|$)/);
     return match ? match[1] : null;
