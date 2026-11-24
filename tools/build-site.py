@@ -11,7 +11,7 @@ import json, os, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://graphley.ai"
-GA = "G-PENDING"
+GA = "G-5X9MHZPLGK"
 DESC = ("Graphley is a free, local-first analytics app for Mac. It puts every website and App Store app you run "
         "in one dashboard, from Google Analytics and App Store Connect, with no Graphley server. Your AI agents "
         "can set it up through its built-in MCP server. Free and source available. iPhone app coming soon.")
@@ -103,6 +103,9 @@ def head(path, title, desc, graph, noindex=False, home=False):
             f'  <meta name="twitter:title" content="{title}">', f'  <meta name="twitter:description" content="{desc}">',
             f'  <meta name="twitter:image" content="{SITE}/social-card.png">',
             '  <meta name="author" content="Brad Dunlap">']
+    if home:
+        meta += ['  <meta name="google-site-verification" content="0vROIKaO6XMvtjj9IjCOEPsr26qcvrqohH7mbLpWpfk">',
+                 '  <meta name="msvalidate.01" content="E2001B47E91F72A19BB1E8E642B26928">']
     meta += ['  <link rel="icon" href="/favicon.png" type="image/png">', '  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">',
              '  <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>',
              '  <link rel="stylesheet" href="/assets/site.css">',
