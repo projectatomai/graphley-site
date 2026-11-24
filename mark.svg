@@ -1,22 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
-  <defs>
-    <linearGradient id="sea" x1="0" y1="0" x2="0.35" y2="1">
-      <stop offset="0" stop-color="#1D6E8A"/>
-      <stop offset="1" stop-color="#0B1B21"/>
-    </linearGradient>
-    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#5DB6D2" stop-opacity="0.55"/>
-      <stop offset="1" stop-color="#5DB6D2" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-  <rect width="1024" height="1024" fill="url(#sea)"/>
-  <g stroke="#E6EDEB" stroke-opacity="0.16" stroke-width="6">
-    <line x1="152" y1="300" x2="872" y2="300"/>
-    <line x1="152" y1="460" x2="872" y2="460"/>
-    <line x1="152" y1="620" x2="872" y2="620"/>
-    <line x1="152" y1="780" x2="872" y2="780"/>
-  </g>
-  <path d="M152 700 C 250 700, 290 560, 390 560 S 520 690, 610 640 S 740 330, 860 300 L 860 820 L 152 820 Z" fill="url(#fill)"/>
-  <path d="M152 700 C 250 700, 290 560, 390 560 S 520 690, 610 640 S 740 330, 860 300" fill="none" stroke="#E6EDEB" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="860" cy="300" r="46" fill="#5DB6D2" stroke="#E6EDEB" stroke-width="18"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Graphley app icon, "Stacked tide" (picked Nov 24 2026). Full-bleed 1024 square: no corners, no shadow; the build adds the squircle.
+       Plain on purpose: solid fills only, no strokes, gradients, opacity, masks, filters or text,
+       absolute M/L/C/Z commands only, so any SVG renderer (librsvg, ImageMagick, Chrome) draws it the same.
+       Each shape has an id so it can be split into Icon Composer layers for macOS 26 / iOS 26. -->
+  <rect id="ground" x="0" y="0" width="1024" height="1024" fill="#1D6E8A"/>
+  <path id="crest" d="M-80 590 C-46.7 585.8 51.7 559.2 120 565 C188.3 570.8 260 628.3 330 625 C400 621.7 468.3 585.8 540 545 C611.7 504.2 666 445.8 760 380 C854 314.2 1046.7 188.3 1104 150 L1104 1100 L-80 1100 Z" fill="#E6EDEB"/>
+  <path id="band-teal" d="M-80 752.6 C-46.7 749.4 51.7 725.7 120 733.6 C188.3 741.5 260 801.1 330 799.9 C400 798.7 468.3 764.9 540 726.2 C611.7 687.5 666 630.8 760 567.8 C854 504.8 1046.7 384.7 1104 348.1 L1104 1100 L-80 1100 Z" fill="#3BA49C"/>
+  <path id="band-amber" d="M-80 919.1 C-46.7 919.4 51.7 907.6 120 921.1 C188.3 934.5 260 1000 330 999.7 C400 999.3 468.3 962.5 540 919 C611.7 875.5 666 808.9 760 738.7 C854 668.6 1046.7 538.3 1104 498.2 L1104 1100 L-80 1100 Z" fill="#C9853A"/>
 </svg>
