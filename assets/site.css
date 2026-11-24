@@ -41,10 +41,16 @@
   --ink: #0e2830;
   --ink-2: #2f4c52;
   --muted: #557070;
+  /* Brand: the four colors of the Stacked tide icon (mark.svg). Everything else is tuned from these. */
+  --tide: #1d6e8a; --foam: #e6edeb; --lagoon: #3ba49c; --amber: #c9853a;
   --accent: #1d6e8a;
   --accent-strong: #175a71;
   --accent-ink: #ffffff;
-  --up: #2b7a57;
+  /* Filled buttons and selections: Tide blue in both modes, like the icon. */
+  --fill: var(--tide);
+  --fill-strong: #175a71;
+  --fill-ink: #ffffff;
+  --up: #247a72;
   --down: #b0503a;
   --s1: #1d6e8a; --s2: #3ba49c; --s3: #c9853a; --s4: #7a6cb0; --s5: #c2566b;
   --shadow: 0 1px 0 rgb(14 40 48 / .06), 0 24px 50px -24px rgb(14 40 48 / .34);
@@ -69,10 +75,13 @@
     --ink: #e2eeec;
     --ink-2: #b4c8c7;
     --muted: #88a2a2;
-    --accent: #5db6d2;
-    --accent-strong: #84cae0;
+    /* Tide is too dark for text on the night background, so text accents use Lagoon. */
+    --accent: #5ec4ba;
+    --accent-strong: #86d6cd;
     --accent-ink: #06161b;
-    --up: #5cc594;
+    --fill-strong: #247e9d;
+    --fill-ink: #f2f7f6;
+    --up: #5ec4ba;
     --down: #e58a72;
     --s1: #5db6d2; --s2: #59c9bf; --s3: #e3a45a; --s4: #a79ae0; --s5: #e57f93;
     --shadow: 0 24px 50px -24px rgb(0 0 0 / .7);
@@ -117,19 +126,19 @@ code { font: .88em/1.5 var(--mono); padding: .08em .38em; border-radius: 5px; ba
 .nav nav { display: flex; align-items: center; gap: clamp(14px, 2.4vw, 28px); }
 .nav nav a { color: var(--ink-2); text-decoration: none; font-size: .9rem; font-weight: 500; white-space: nowrap; transition: color .15s; }
 .nav nav a:hover, .nav nav a[aria-current="page"] { color: var(--accent); }
-.nav nav a.nav-cta { display: inline-flex; align-items: center; gap: 7px; padding: 7px 13px; border: 1px solid transparent; border-radius: 8px; background: var(--accent); color: var(--accent-ink); }
-.nav nav a.nav-cta:hover { background: var(--accent-strong); color: var(--accent-ink); }
+.nav nav a.nav-cta { display: inline-flex; align-items: center; gap: 7px; padding: 7px 13px; border: 1px solid transparent; border-radius: 8px; background: var(--fill); color: var(--fill-ink); }
+.nav nav a.nav-cta:hover { background: var(--fill-strong); color: var(--fill-ink); }
 
 /* Buttons */
 .button {
   display: inline-flex; align-items: center; justify-content: center; gap: 9px;
   min-height: 46px; padding: 10px 20px;
   border: 1px solid transparent; border-radius: 10px;
-  background: var(--accent); color: var(--accent-ink);
+  background: var(--fill); color: var(--fill-ink);
   font-weight: 650; font-size: .95rem; text-decoration: none; white-space: nowrap; cursor: pointer;
   transition: background .15s, border-color .15s;
 }
-.button:hover { background: var(--accent-strong); color: var(--accent-ink); }
+.button:hover { background: var(--fill-strong); color: var(--fill-ink); }
 .button.secondary { background: transparent; color: var(--ink); border-color: var(--line-2); }
 .button.secondary:hover { background: var(--surface); border-color: var(--accent); color: var(--ink); }
 .button svg { flex-shrink: 0; }
@@ -182,7 +191,7 @@ h2 em, h1 em { font-style: normal; color: var(--accent); }
 }
 .gw {
   --w-bg: #f7faf9; --w-side: #edf3f1; --w-sunk: #dae4e1; --w-ink: #0e2830; --w-muted: #557070; --w-line: #c3d2ce;
-  --w-accent: #1d6e8a; --w-accent-ink: #fff; --w-up: #2b7a57; --w-down: #b0503a;
+  --w-accent: #1d6e8a; --w-accent-ink: #fff; --w-up: #247a72; --w-down: #b0503a;
   --k1: #1d6e8a; --k2: #3ba49c; --k3: #c9853a; --k4: #7a6cb0; --k5: #c2566b; --w-fill: .14;
   color-scheme: light;
   display: grid; grid-template-rows: auto 1fr;
@@ -194,7 +203,7 @@ h2 em, h1 em { font-style: normal; color: var(--accent); }
 }
 .gw[data-appearance="dark"] {
   --w-bg: #11252c; --w-side: #0e2027; --w-sunk: #0a171c; --w-ink: #e2eeec; --w-muted: #88a2a2; --w-line: #21404a;
-  --w-accent: #5db6d2; --w-accent-ink: #06161b; --w-up: #5cc594; --w-down: #e58a72;
+  --w-accent: #1d6e8a; --w-accent-ink: #f2f7f6; --w-up: #5ec4ba; --w-down: #e58a72;
   --k1: #5db6d2; --k2: #59c9bf; --k3: #e3a45a; --k4: #a79ae0; --k5: #e57f93; --w-fill: .2;
   color-scheme: dark;
 }
@@ -257,7 +266,7 @@ h2 em, h1 em { font-style: normal; color: var(--accent); }
 .chooser { display: inline-flex; align-items: center; gap: 8px; }
 .chooser .opts { display: inline-flex; padding: 3px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); }
 .chooser button { padding: 4px 12px; border: 0; border-radius: 6px; background: none; color: var(--ink-2); font-size: .82rem; font-weight: 500; cursor: pointer; white-space: nowrap; }
-.chooser button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+.chooser button[aria-pressed="true"] { background: var(--fill); color: var(--fill-ink); }
 
 /* Facts */
 .facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: clamp(56px, 7vw, 88px); border-block: 1px solid var(--line); text-align: left; }
@@ -320,7 +329,7 @@ h2 em, h1 em { font-style: normal; color: var(--accent); }
 .session-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; padding: 12px 16px; border-bottom: 1px solid var(--line); background: var(--surface-2); font: 500 .78rem/1.4 var(--mono); color: var(--muted); }
 .session-body { display: grid; gap: 14px; padding: 20px; }
 .say { max-width: 46ch; padding: 11px 14px; border-radius: 14px; font-size: .95rem; line-height: 1.5; }
-.say.you { justify-self: end; background: var(--accent); color: var(--accent-ink); border-bottom-right-radius: 4px; }
+.say.you { justify-self: end; background: var(--fill); color: var(--fill-ink); border-bottom-right-radius: 4px; }
 .say.agent-says { background: var(--sunk); color: var(--ink); border-bottom-left-radius: 4px; }
 .calls { list-style: none; padding: 0; display: grid; gap: 6px; }
 .calls li { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 10px; align-items: start; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); }
@@ -533,6 +542,10 @@ h2 em, h1 em { font-style: normal; color: var(--accent); }
 .missing-hero img { margin-inline: auto; margin-bottom: 23px; }
 
 /* Consent banner colors for this site. assets/analytics.css stays as shared; these win by specificity. */
-body .analytics-choice { --ga-bg: var(--surface); --ga-text: var(--ink); --ga-muted: var(--ink-2); --ga-line: var(--line-2); --ga-accent: var(--accent); --ga-accent-ink: var(--accent-ink); box-shadow: var(--shadow); }
+body .analytics-choice { --ga-bg: var(--surface); --ga-text: var(--ink); --ga-muted: var(--ink-2); --ga-line: var(--line-2); --ga-accent: var(--fill); --ga-accent-ink: var(--fill-ink); box-shadow: var(--shadow); }
 .hero h1 em { display: block; }
 .download-intro::before { display: none; }
+
+/* Brand edge: the icon's Tide, Lagoon and Amber bands above the footer. */
+body > footer { position: relative; }
+body > footer::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 56px; background: url("/assets/tide-band.svg") center bottom / 100% 100% no-repeat; pointer-events: none; }
