@@ -2,7 +2,7 @@
 
 [graphley.ai](https://graphley.ai/) is the Graphley landing page, [Mac download and installation guide](https://graphley.ai/download/), [MCP setup](https://graphley.ai/mcp/), [help](https://graphley.ai/help/) and [privacy](https://graphley.ai/privacy/) pages. The app source is in [protomota/graphley](https://github.com/protomota/graphley).
 
-It is a static site on the house Protomota app-site template, re-skinned with Graphley's "Tide table" design. The production Vercel project is `graphley-site`, deployed from GitHub `main`. There is no build step beyond IndexNow.
+It is a static site on the house Protomota app-site template, re-skinned with Graphley's "Tide table" design. The production Vercel project is `graphley` (team Protomota), deployed from GitHub `main`. There is no build step beyond IndexNow.
 
 ## Pages
 
