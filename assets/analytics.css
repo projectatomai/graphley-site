@@ -1,0 +1,52 @@
+/* Analytics consent banner, added by analytics.js. Colors follow the site. */
+.analytics-choice {
+  --ga-bg: #191e29;
+  --ga-text: #f6f3eb;
+  --ga-muted: #c6cbd5;
+  --ga-line: #3d4658;
+  --ga-accent: #ffc977;
+  --ga-accent-ink: #1b1407;
+  position: fixed;
+  z-index: 1000;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(980px, calc(100% - 40px));
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 24px;
+  color: var(--ga-text);
+  background: var(--ga-bg);
+  border: 1px solid var(--ga-line);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+  font: inherit;
+  text-align: left;
+}
+.analytics-choice[hidden] { display: none; }
+.analytics-choice h2 { margin: 0 0 8px; font-size: 21px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; color: var(--ga-text); }
+.analytics-choice p { margin: 0; font-size: 13px; line-height: 1.65; color: var(--ga-muted); }
+.analytics-choice p a { color: var(--ga-accent); text-decoration: underline; text-underline-offset: 3px; }
+.analytics-choice-actions { display: flex; gap: 12px; flex-shrink: 0; }
+.analytics-choice-actions button {
+  padding: 12px 18px;
+  border: 1px solid var(--ga-line);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--ga-text);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.analytics-choice-actions button:hover { border-color: var(--ga-accent); }
+.analytics-choice-actions .analytics-allow { background: var(--ga-accent); color: var(--ga-accent-ink); border-color: var(--ga-accent); }
+.analytics-choice-actions .analytics-allow:hover { filter: brightness(1.08); }
+.analytics-choice :focus-visible, .analytics-settings-link:focus-visible { outline: 3px solid var(--ga-accent, currentColor); outline-offset: 4px; }
+.analytics-settings-link { padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; text-align: left; }
+.analytics-settings-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 768px) {
+  .analytics-choice { flex-direction: column; align-items: flex-start; gap: 18px; padding: 20px; max-height: calc(100dvh - 40px); overflow: auto; }
+  .analytics-choice-actions { flex-wrap: wrap; }
+}

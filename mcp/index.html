@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Graphley’s built-in MCP server lets Claude Code, Codex and Claude chat set up your sites, apps and dashboards.">
+  <meta name="theme-color" content="#e6edeb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b1b21" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://graphley.ai/mcp/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Graphley">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="MCP setup · Graphley">
+  <meta property="og:description" content="How Graphley’s built-in MCP server lets Claude Code, Codex and Claude chat set up your sites, apps and dashboards.">
+  <meta property="og:url" content="https://graphley.ai/mcp/">
+  <meta property="og:image" content="https://graphley.ai/social-card.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Graphley. Every site and app, one calm chart. Analytics for your Mac. Free and source available.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ProtomotaLab">
+  <meta name="twitter:title" content="MCP setup · Graphley">
+  <meta name="twitter:description" content="How Graphley’s built-in MCP server lets Claude Code, Codex and Claude chat set up your sites, apps and dashboards.">
+  <meta name="twitter:image" content="https://graphley.ai/social-card.png">
+  <meta name="author" content="Brad Dunlap">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/analytics.js" data-ga="G-PENDING" data-site="graphley" data-host="graphley.ai" data-privacy="/privacy/" data-footer=".footer nav" data-css="/assets/analytics.css" defer></script>
+  <title>MCP setup · Graphley</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://graphley.ai/mcp/#webpage","url":"https://graphley.ai/mcp/","name":"MCP setup · Graphley","description":"How Graphley’s built-in MCP server lets Claude Code, Codex and Claude chat set up your sites, apps and dashboards.","isPartOf":{"@id":"https://graphley.ai/#website"},"inLanguage":"en-US","publisher":{"@id":"https://protomota.com/#protomota"},"about":{"@id":"https://graphley.ai/#app"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Graphley","item":"https://graphley.ai/"},{"@type":"ListItem","position":2,"name":"MCP setup","item":"https://graphley.ai/mcp/"}]},{"@type":"SoftwareApplication","@id":"https://graphley.ai/#app","name":"Graphley","url":"https://graphley.ai/","description":"Graphley is a free, local-first analytics app for Mac. It puts every website and App Store app you run in one dashboard, from Google Analytics and App Store Connect, with no Graphley server. Your AI agents can set it up through its built-in MCP server. Free and source available. iPhone app coming soon.","applicationCategory":"BusinessApplication","applicationSubCategory":"Web and app analytics","operatingSystem":"macOS 14 or later","softwareVersion":"0.1.0","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock"},"downloadUrl":"https://graphley.ai/downloads/Graphley-0.1.0.dmg","installUrl":"https://graphley.ai/download/","image":"https://graphley.ai/assets/icon.png","featureList":["Every website and App Store app in one dashboard","Google Analytics 4 and App Store Connect sources","Dashboards you build from charts and numbers","Compare any period with the one before","Keys kept in the Keychain, never on a server","Signed automatic updates","Built-in MCP server with 16 tools for Claude Code, Codex and Claude chat"],"author":{"@id":"https://protomota.com/#brad"},"publisher":{"@id":"https://protomota.com/#protomota"},"sameAs":["https://protomota.com/apps"]},{"@type":"Organization","@id":"https://protomota.com/#protomota","name":"Protomota","legalName":"Protomota, LLC","url":"https://protomota.com/","logo":"https://protomota.com/redesign/logo.png","founder":{"@id":"https://protomota.com/#brad"},"sameAs":["https://github.com/protomota","https://x.com/protomotalab","https://youtube.com/@protomota","https://newsletter.protomota.com"]},{"@type":"Person","@id":"https://protomota.com/#brad","name":"Brad Dunlap","url":"https://protomota.com/about","sameAs":["https://www.linkedin.com/in/bradley-dunlap/","https://github.com/protomota"]}]}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="wordmark" href="/" aria-label="Graphley home"><img src="/assets/icon.png" alt="" width="30" height="30">Graphley</a>
+      <nav aria-label="Main">
+        <a class="nav-hide" href="/#dashboards">Dashboards</a>
+        <a class="nav-hide" href="/#iphone">iPhone</a>
+        <a class="nav-hide" href="/#agents">Agents</a>
+        <a class="nav-hide-sm" href="/mcp/" aria-current="page">MCP setup</a>
+        <a class="nav-cta" href="/download/"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg> Download for Mac</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="shell page-head">
+      <span class="mark">mcp setup</span>
+      <h1>Connect an agent to Graphley.</h1>
+      <p class="lead">Graphley’s MCP server runs on your Mac, on the same data as the app. Install Graphley, add it to your agent, and ask for what you want tracked.</p>
+    </div>
+    <div class="shell doc">
+      <nav class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#how">How it works</a>
+        <a href="#claude-code">Claude Code</a>
+        <a href="#codex">Codex</a>
+        <a href="#claude-chat">Claude chat</a>
+        <a href="#tools">Tools</a>
+        <a href="#try">Try it</a>
+      </nav>
+      <div class="prose">
+        <section id="how">
+          <h2>How it works</h2>
+          <p>The Graphley app runs as an MCP server when your agent starts it with <code>--mcp</code>. It talks over standard input and output, on your Mac only, and reads and writes the same local workspace the app shows. Changes appear in the app right away and are listed under <strong>Settings → Agents</strong>.</p>
+          <p class="note"><strong>You stay in control.</strong> Turn off <strong>Let agents make changes</strong> to keep agents view only. Saving keys is off unless you turn on <strong>Let agents set keys</strong>, and even then a key is read from the environment, never typed into a chat.</p>
+        </section>
+        <section id="claude-code">
+          <h2>Claude Code</h2>
+          <p>Add Graphley as a local server for your user or project:</p>
+          <p class="prompt">claude mcp add graphley -- /Applications/Graphley.app/Contents/MacOS/Graphley --mcp</p>
+        </section>
+        <section id="codex">
+          <h2>Codex</h2>
+          <p>Add this to <code>~/.codex/config.toml</code>:</p>
+          <p class="prompt">[mcp_servers.graphley]<br>command = "/Applications/Graphley.app/Contents/MacOS/Graphley"<br>args = ["--mcp"]</p>
+        </section>
+        <section id="claude-chat">
+          <h2>Claude chat</h2>
+          <p>In the Claude desktop app, open <strong>Settings → Developer → Edit Config</strong> and add a <code>graphley</code> entry under <code>mcpServers</code> with the same command and the <code>--mcp</code> argument. Restart Claude.</p>
+        </section>
+        <section id="tools">
+          <h2>Tools</h2>
+          <div class="table-wrap">
+            <table class="tide-table">
+              <thead><tr><th>Tool</th><th>What it does</th></tr></thead>
+              <tbody>
+              <tr><td><code>get_status</code></td><td>Which accounts are connected, how many sites, apps and dashboards there are, and when data was last refreshed.</td></tr>
+              <tr><td><code>list_sites · list_apps · list_dashboards</code></td><td>What Graphley tracks today, with IDs to use in other tools.</td></tr>
+              <tr><td><code>query_metric</code></td><td>Daily values for any metric, for one site or all of them, optionally by page or platform.</td></tr>
+              <tr><td><code>compare_periods</code></td><td>The last N days against the N days before, per site, with percent change.</td></tr>
+              <tr><td><code>discover_ga4_properties</code></td><td>Every GA4 property your Google account can read, marked tracked or not.</td></tr>
+              <tr><td><code>add_site · update_site · archive_site</code></td><td>Track a website, change it, or stop tracking it (history is kept).</td></tr>
+              <tr><td><code>add_app</code></td><td>Track an App Store app by its Apple ID, linked to its website if you like.</td></tr>
+              <tr><td><code>create_dashboard · add_widget · remove_widget</code></td><td>Build and change dashboards.</td></tr>
+              <tr><td><code>refresh_all</code></td><td>Pull fresh numbers now.</td></tr>
+              <tr><td><code>set_app_store_key</code></td><td>Save an App Store Connect key to the Keychain. Off unless you allow it.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="try">
+          <h2>Try it</h2>
+          <p class="prompt">Find my Google Analytics properties and track the ones that aren’t in Graphley yet.</p>
+          <p class="prompt">Make a Launch dashboard with visitors per day and App Store downloads for my newest app.</p>
+          <p class="prompt">Which site grew the most this month, and which pages drove it?</p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="shell footer">
+      <a class="product-credit" href="https://protomota.com/" target="_blank" rel="noopener noreferrer"><img src="/assets/protomota-logo.png" width="22" height="22" alt=""><span>A Protomota Product</span></a>
+      <nav aria-label="Footer"><a href="/download/">Download</a><a href="/mcp/">MCP setup</a><a href="/help/">Support</a><a href="/privacy/">Privacy</a><a href="https://newsletter.protomota.com/">Newsletter</a><a href="https://x.com/ProtomotaLab">Follow on X</a><a href="https://buymeacoffee.com/protomotalab">Buy me a coffee</a><a href="https://protomota.com/apps?app=graphley#feedback">Send Feedback</a></nav>
+    </div>
+    <div class="shell footer-credit">
+      <span>&copy; <span data-pm-year>2026</span> Protomota</span>
+    </div>
+  </footer>
+  <script src="/assets/pm-year.js" defer></script>
+</body>
+</html>

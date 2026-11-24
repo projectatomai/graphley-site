@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#1D6E8A"/>
+      <stop offset="1" stop-color="#0B1B21"/>
+    </linearGradient>
+    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5DB6D2" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#5DB6D2" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#sea)"/>
+  <g stroke="#E6EDEB" stroke-opacity="0.16" stroke-width="6">
+    <line x1="152" y1="300" x2="872" y2="300"/>
+    <line x1="152" y1="460" x2="872" y2="460"/>
+    <line x1="152" y1="620" x2="872" y2="620"/>
+    <line x1="152" y1="780" x2="872" y2="780"/>
+  </g>
+  <path d="M152 700 C 250 700, 290 560, 390 560 S 520 690, 610 640 S 740 330, 860 300 L 860 820 L 152 820 Z" fill="url(#fill)"/>
+  <path d="M152 700 C 250 700, 290 560, 390 560 S 520 690, 610 640 S 740 330, 860 300" fill="none" stroke="#E6EDEB" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="860" cy="300" r="46" fill="#5DB6D2" stroke="#E6EDEB" stroke-width="18"/>
+</svg>

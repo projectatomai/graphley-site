@@ -1,0 +1,41 @@
+# Graphley
+
+> Graphley is a free, local-first analytics app for Mac, made by Protomota. It puts every website and App Store app you run in one dashboard, reading Google Analytics 4 and App Store Connect directly from your Mac. There is no Graphley server and no account. A built-in MCP server lets AI agents such as Claude Code, Codex and Claude chat set it up. An iPhone app is coming soon.
+
+Graphley's website is https://graphley.ai. Other products with similar names are not related to it.
+
+Key facts:
+
+- Maker: Protomota (Protomota, LLC), the independent studio of Brad Dunlap. https://protomota.com
+- Price: free. Every feature is included. Tips are optional.
+- License: free and source available.
+- Platform: Mac, macOS 14 or later. The iPhone app is coming soon and is not on the App Store yet.
+- Install: a signed and notarized disk image from https://graphley.ai/download/ with signed automatic updates (Sparkle).
+- Download: https://graphley.ai/downloads/Graphley-0.1.0.dmg
+- Current release: Graphley 0.1.0 (build 2), Size pending. SHA-256: pending
+- Sources: Google Analytics 4 (read-only Google sign-in) for visitors, new visitors, sessions, page views, key events and top pages; App Store Connect sales reports (an API key with Sales and Trends access) for first downloads and redownloads by app and device; public App Store ratings.
+- Dashboards: an overview of every site and app, a page per site, and dashboards built from line charts, bars and single numbers. Every number compares against the period before (7, 30 or 90 days).
+- Refresh: every morning at a chosen hour, on launch if missed, with Command-R, or when an agent asks. A failing source is skipped and flagged.
+- Privacy: the workspace and numbers are stored on the Mac. Sign-in tokens and keys are kept in the Keychain, never on a server and never in agent tool arguments.
+- Agents: the app runs as a local MCP server with `Graphley --mcp` (16 tools). Users choose whether agents can only view or can also make changes, and whether they can save keys. Every agent change is logged in Settings → Agents.
+
+## Pages
+
+- [Graphley](https://graphley.ai/): what it does, the working preview, the iPhone app (coming soon), agents and privacy
+- [Download and install](https://graphley.ai/download/): the Mac installer, install steps, what's in the current release and the SHA-256 checksum
+- [MCP setup](https://graphley.ai/mcp/): connecting Claude Code, Codex and Claude chat, and the tool list
+- [Help](https://graphley.ai/help/): common questions
+- [Privacy](https://graphley.ai/privacy/): how the app, agent connections and the website handle information
+
+## Common questions
+
+- What is Graphley? A free analytics app for Mac that puts every website and App Store app you run in one dashboard, with no Graphley server.
+- Is Graphley free? Yes. It is free and source available, with no account, no trial and nothing to unlock.
+- Is there an iPhone app? It is coming soon. It will show the Mac's numbers through the user's own private iCloud database.
+- How does Graphley update? It checks for new versions and installs signed updates automatically.
+- Which agents work with Graphley? Claude Code, Codex and Claude chat, through its local MCP server.
+
+## Optional
+
+- [Graphley on protomota.com](https://protomota.com/apps)
+- [More Protomota apps](https://protomota.com/apps): OpenTalon, Inkspring, Jotley, Glimmer, PulseCanvas Studio, Voxley and Textley
