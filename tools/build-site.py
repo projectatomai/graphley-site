@@ -603,7 +603,7 @@ def help_page():
         </section>
         <section id="contact">
           <h2>Get in touch</h2>
-          <p>Ask a question or tell us what you’d like Graphley to track in <a href="https://protomota.com/cult">our Discord</a>, or send feedback with <a href="https://protomota.com/apps?app=graphley#feedback">the Protomota apps form</a>.</p>
+          <p>Ask a question or tell us what you’d like Graphley to track in <a href="https://lab.protomota.com">our Discord</a>, or send feedback with <a href="https://protomota.com/apps?app=graphley#feedback">the Protomota apps form</a>.</p>
         </section>
       </div>
     </div>
