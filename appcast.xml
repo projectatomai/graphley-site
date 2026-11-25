@@ -3,15 +3,15 @@
     <channel>
         <title>Graphley</title>
         <item>
-            <title>0.1.9</title>
-            <pubDate>Wed, 25 Nov 2026 12:36:39 -0500</pubDate>
+            <title>0.1.10</title>
+            <pubDate>Wed, 25 Nov 2026 17:06:46 -0500</pubDate>
             <link>https://graphley.ai</link>
-            <sparkle:version>11</sparkle:version>
-            <sparkle:shortVersionString>0.1.9</sparkle:shortVersionString>
+            <sparkle:version>15</sparkle:version>
+            <sparkle:shortVersionString>0.1.10</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<p>The Mac now sends your latest numbers to the iPhone on every launch and after any refresh, so the iPhone app stops waiting for your Mac.</p>
+            <description><![CDATA[<p>Every Protomota site and app in Graphley: nine portfolio dashboards on Mac and iPhone, Search Console and Bing, followers, App Store ratings and reviews in every storefront, and the ad history.</p>
 ]]></description>
-            <enclosure url="https://graphley.ai/downloads/Graphley-0.1.9.dmg" length="3161809" type="application/octet-stream" sparkle:edSignature="YGYE7ly7FwqsUmZZNOf8gqiMSUbRpESVLgqvqgaa9qypNX6xsRIrOC5MBwC3biW6P20l1r7BRKLCV+jWrFj2AA=="/>
+            <enclosure url="https://graphley.ai/downloads/Graphley-0.1.10.dmg" length="4017276" type="application/octet-stream" sparkle:edSignature="yp4TB/yqin+Zyl6YRzqiUV0P/f8NQO23OyIYEPdEbAtstDrhaVXna6D5R17jJpEX8rjpWHik+a8fYzAycW8xCw=="/>
         </item>
     </channel>
 </rss>
