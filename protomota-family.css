@@ -117,9 +117,6 @@
 .protomota-family-block .family-store:is(:hover, :focus-visible) { text-decoration: underline; text-underline-offset: 3px; }
 .protomota-family-block .family-soon { color: var(--family-muted); }
 
-/* App icons: a hairline edge and a soft glow (dark) or shadow (light), so dark icons
-   show on dark backgrounds and light icons on light ones. */
-.protomota-family-block .family-entry img { filter: drop-shadow(0 0 .6px rgb(255 255 255 / .55)) drop-shadow(0 0 7px rgb(255 255 255 / .16)); }
 
 /* 2026-11-24: icon, title and arrow share the title line; icons load eagerly. */
 .protomota-family-block .family-entry { align-items: start; }
@@ -131,3 +128,29 @@
 .protomota-family-block .family-apps > li > .family-entry { height: auto; }
 /* One arrow per entry, on the status link. */
 .protomota-family-block .family-entry { grid-template-columns: 34px minmax(0, 1fr); }
+
+/* App icons (Brad, 2026-11-25): every app icon always shows a visible edge plus a soft
+   shadow on light backgrounds or a soft glow on dark ones. Opaque rounded-square icons use
+   box-shadow (it follows border-radius); transparent icons use drop-shadow. */
+:root {
+  --app-icon-shadow: 0 0 0 1px rgba(0, 0, 0, .08), 0 2px 6px rgba(0, 0, 0, .14), 0 8px 20px rgba(0, 0, 0, .10);
+  --app-icon-drop: drop-shadow(0 0 .5px rgba(0, 0, 0, .40)) drop-shadow(0 2px 4px rgba(0, 0, 0, .16)) drop-shadow(0 6px 12px rgba(0, 0, 0, .10));
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --app-icon-shadow: 0 0 0 1px rgba(255, 255, 255, .10), 0 4px 14px rgba(0, 0, 0, .55), 0 0 18px rgba(255, 255, 255, .08);
+    --app-icon-drop: drop-shadow(0 0 .5px rgba(255, 255, 255, .50)) drop-shadow(0 4px 10px rgba(0, 0, 0, .55)) drop-shadow(0 0 9px rgba(255, 255, 255, .12));
+  }
+}
+.product-credit {
+  --app-icon-shadow: 0 0 0 1px rgba(255, 255, 255, .10), 0 4px 14px rgba(0, 0, 0, .55), 0 0 18px rgba(255, 255, 255, .08);
+  --app-icon-drop: drop-shadow(0 0 .5px rgba(255, 255, 255, .50)) drop-shadow(0 4px 10px rgba(0, 0, 0, .55)) drop-shadow(0 0 9px rgba(255, 255, 255, .12));
+}
+.protomota-family-block .family-entry img,
+.product-credit img {
+  box-shadow: var(--app-icon-shadow);
+  filter: none;
+}
+img[src^="/assets/icon.png"] {
+  filter: var(--app-icon-drop);
+}
