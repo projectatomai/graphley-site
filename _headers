@@ -12,3 +12,12 @@
 /appcast.xml
   Content-Type: application/rss+xml; charset=utf-8
   Cache-Control: public, max-age=300
+
+/favicon.png
+  Cache-Control: public, max-age=3600
+
+/assets/icon.png
+  Cache-Control: public, max-age=3600
+
+/assets/apple-touch-icon.png
+  Cache-Control: public, max-age=3600
