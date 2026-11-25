@@ -3,15 +3,15 @@
     <channel>
         <title>Graphley</title>
         <item>
-            <title>0.1.5</title>
-            <pubDate>Tue, 24 Nov 2026 18:51:02 -0500</pubDate>
+            <title>0.1.6</title>
+            <pubDate>Tue, 24 Nov 2026 21:42:40 -0500</pubDate>
             <link>https://graphley.ai</link>
-            <sparkle:version>7</sparkle:version>
-            <sparkle:shortVersionString>0.1.5</sparkle:shortVersionString>
+            <sparkle:version>8</sparkle:version>
+            <sparkle:shortVersionString>0.1.6</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<p>Graphley's colors now match its icon: buttons and selections in tide blue, teal accents in dark mode, and a smoother icon.</p>
+            <description><![CDATA[<p>Graphley now runs on iPad, with a sidebar layout like the Mac. iPhone and iPad sharing in Settings.</p>
 ]]></description>
-            <enclosure url="https://graphley.ai/downloads/Graphley-0.1.5.dmg" length="3056507" type="application/octet-stream" sparkle:edSignature="hLPDq+rajJOG1euWxRLvuyzarzpDUfBnJb+qfxCzQ7SN54662IhEJVtp1LjRO1Vy8NpnRLqxm9YOSoh9IrgjBQ=="/>
+            <enclosure url="https://graphley.ai/downloads/Graphley-0.1.6.dmg" length="3067789" type="application/octet-stream" sparkle:edSignature="LXo96W4XQP42fw/OpK239Qmv7EGEpsQCwDhO3zc1elCz937c6qsLZXWrQOmQkt3TwL9RYl+rA9EmJCgqssRLDQ=="/>
         </item>
     </channel>
 </rss>
