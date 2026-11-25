@@ -3,15 +3,15 @@
     <channel>
         <title>Graphley</title>
         <item>
-            <title>0.1.6</title>
-            <pubDate>Tue, 24 Nov 2026 21:42:40 -0500</pubDate>
+            <title>0.1.7</title>
+            <pubDate>Wed, 25 Nov 2026 00:09:55 -0500</pubDate>
             <link>https://graphley.ai</link>
-            <sparkle:version>8</sparkle:version>
-            <sparkle:shortVersionString>0.1.6</sparkle:shortVersionString>
+            <sparkle:version>9</sparkle:version>
+            <sparkle:shortVersionString>0.1.7</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<p>Graphley now runs on iPad, with a sidebar layout like the Mac. iPhone and iPad sharing in Settings.</p>
+            <description><![CDATA[<p>A cleaner top bar: one aligned refresh control, and dashboards no longer crowd the corner.</p>
 ]]></description>
-            <enclosure url="https://graphley.ai/downloads/Graphley-0.1.6.dmg" length="3067789" type="application/octet-stream" sparkle:edSignature="LXo96W4XQP42fw/OpK239Qmv7EGEpsQCwDhO3zc1elCz937c6qsLZXWrQOmQkt3TwL9RYl+rA9EmJCgqssRLDQ=="/>
+            <enclosure url="https://graphley.ai/downloads/Graphley-0.1.7.dmg" length="3143352" type="application/octet-stream" sparkle:edSignature="WwVK6NuR5tI6/gOc9tlrdzdXeMp/8iKDrRkW5iAISPDqYNlo6q0LArE2x7JjEt4i4o5X7UdMavloRcWlrnfFAQ=="/>
         </item>
     </channel>
 </rss>
