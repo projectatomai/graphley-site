@@ -549,3 +549,6 @@ body .analytics-choice { --ga-bg: var(--surface); --ga-text: var(--ink); --ga-mu
 /* Brand edge: the icon's Tide, Lagoon and Amber bands above the footer. */
 body > footer { position: relative; }
 body > footer::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 56px; background: url("/assets/tide-band.svg") center bottom / 100% 100% no-repeat; pointer-events: none; }
+
+/* Cards size to their content: no stretched newsletter card. */
+.about-protomota { align-items: start; }
