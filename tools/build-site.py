@@ -269,7 +269,7 @@ def index():
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <div class="shell">
-        <p class="pill"><i></i>Mac app · Free · iPhone coming soon</p>
+        <p class="pill"><i></i>Mac app · Free · Source available</p>
         <h1 id="hero-title">Every site and app. <em>One calm chart.</em></h1>
         <p class="lead">Graphley puts your websites and App Store apps in one dashboard on your Mac. It reads Google Analytics and App Store Connect directly, keeps your keys in the Keychain, and runs no server of its own. <strong>Your AI agents can set it up for you.</strong></p>
         <div class="actions">
@@ -456,7 +456,6 @@ def download():
         <a class="button download-button" href="{DMG}" download>{APPLE.replace('width="16" height="16"', 'width="20" height="20"')}<span>Download Graphley {rel("version")}</span></a>
         <p class="fineprint">macOS 14 or later · Version {rel("version")} (build {rel("build")}) · {rel("size")}</p>
         <p class="fineprint">Signed by Protomota · Notarized by Apple · Signed automatic updates</p>
-        <p class="fineprint">iPhone app coming soon</p>
       </div>
     </div>
 
