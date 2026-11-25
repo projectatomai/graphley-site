@@ -13,11 +13,11 @@ Key facts:
 - Install: a signed and notarized disk image from https://graphley.ai/download/ with signed automatic updates (Sparkle).
 - Download: https://graphley.ai/downloads/Graphley-0.1.9.dmg
 - Current release: Graphley 0.1.9 (build 11), 3.2 MB. SHA-256: 45436c1e86555ff92f9d8b53522fb3d5b72e3da7eb1d81a8cd26dca4259406b2
-- Sources: Google Analytics 4 (read-only Google sign-in) for visitors, new visitors, sessions, page views, key events and top pages; App Store Connect sales reports (an API key with Sales and Trends access) for first downloads and redownloads by app and device; public App Store ratings.
+- Sources: Google Analytics 4 (read-only Google sign-in) for visitors, new visitors, sessions, page views, key events and top pages; App Store Connect sales reports (an API key with Sales and Trends access) for first downloads and redownloads by app and device; App Store ratings and written reviews in every storefront; Google Search Console and Bing Webmaster Tools clicks, impressions and position; follower counts from X, Instagram, YouTube and GitHub, with Substack and LinkedIn recorded by hand.
 - Dashboards: an overview of every site and app, a page per site, and dashboards built from line charts, bars and single numbers. Every number compares against the period before (7, 30 or 90 days).
 - Refresh: every morning at a chosen hour, on launch if missed, with Command-R, or when an agent asks. A failing source is skipped and flagged.
 - Privacy: the workspace and numbers are stored on the Mac. Sign-in tokens and keys are kept in the Keychain, never on a server and never in agent tool arguments.
-- Agents: the app runs as a local MCP server with `Graphley --mcp` (16 tools). Users choose whether agents can only view or can also make changes, and whether they can save keys. Every agent change is logged in Settings → Agents.
+- Agents: the app runs as a local MCP server with `Graphley --mcp` (23 tools). Users choose whether agents can only view or can also make changes, and whether they can save keys. Every agent change is logged in Settings → Agents.
 
 ## Pages
 

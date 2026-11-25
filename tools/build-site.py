@@ -53,10 +53,10 @@ APP = {"@type": "SoftwareApplication", "@id": f"{SITE}/#app", "name": "Graphley"
        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock"},
        "downloadUrl": SITE + DMG, "installUrl": f"{SITE}/download/",
        "image": f"{SITE}/assets/icon.png?v=20261124",
-       "featureList": ["Every website and App Store app in one dashboard", "Google Analytics 4 and App Store Connect sources",
+       "featureList": ["Every website and App Store app in one dashboard", "Google Analytics 4, App Store Connect, Search Console, Bing and follower sources",
                        "Dashboards you build from charts and numbers", "Compare any period with the one before",
                        "Keys kept in the Keychain, never on a server", "Signed automatic updates",
-                       "Built-in MCP server with 16 tools for Claude Code, Codex and Claude chat"],
+                       "Built-in MCP server with 23 tools for Claude Code, Codex and Claude chat"],
        "author": {"@id": "https://protomota.com/#brad"}, "publisher": {"@id": "https://protomota.com/#protomota"},
        "sameAs": ["https://protomota.com/apps"]}
 
@@ -421,10 +421,11 @@ def index():
 
 WHATS_NEW = [("Dashboards", "An overview of every site and app, a page per site, and dashboards you build from line charts, bars and numbers."),
              ("Google Analytics 4", "Sign in with Google once (read-only). Visitors, new visitors, sessions, page views, key events and top pages."),
-             ("App Store Connect", "First downloads and redownloads by app and device from your daily sales reports, plus public App Store ratings."),
+             ("App Store Connect", "First downloads and redownloads by app and device from your daily sales reports, plus ratings and written reviews from every storefront."),
+             ("Search and followers", "Google Search Console and Bing Webmaster Tools clicks, impressions and position per site, and follower counts from X, Instagram, YouTube and GitHub."),
              ("Compare periods", "7, 30 and 90 days, each against the period before."),
              ("Morning refresh", "Refreshes at the hour you choose, on launch if it missed one, or with ⌘R. A failing source never blocks the others."),
-             ("MCP server", "16 tools for Claude Code, Codex and Claude chat, with view-only and key-saving switches, and a log of every agent change."),
+             ("MCP server", "23 tools for Claude Code, Codex and Claude chat, with view-only and key-saving switches, and a log of every agent change."),
              ("Automatic updates", "Signed updates through Sparkle. Graphley checks for new versions and installs them for you.")]
 
 
@@ -485,7 +486,7 @@ def download():
           </tbody>
         </table>
       </div>
-      <p>The iPhone app, Home Screen widgets and more sources (Search Console, YouTube, newsletters) are coming. Follow along on the <a href="https://newsletter.protomota.com/">Protomota newsletter</a>.</p>
+      <p>The iPhone app and Home Screen widgets are coming. Follow along on the <a href="https://newsletter.protomota.com/">Protomota newsletter</a>.</p>
     </section>
   </main>
 ''' + footer(status=False)
@@ -501,7 +502,12 @@ TOOLS = [("get_status", "Which accounts are connected, how many sites, apps and 
          ("add_app", "Track an App Store app by its Apple ID, linked to its website if you like."),
          ("create_dashboard · add_widget · remove_widget", "Build and change dashboards."),
          ("refresh_all", "Pull fresh numbers now."),
-         ("set_app_store_key", "Save an App Store Connect key to the Keychain. Off unless you allow it.")]
+         ("set_app_store_key", "Save an App Store Connect key to the Keychain. Off unless you allow it."),
+         ("set_source_key · set_google_service_account", "Save a Bing, X, Instagram, OpenTalon or Google service account key to the Keychain. Off unless you allow it."),
+         ("record_followers · import_history", "Record a follower count for an account with no API, or bring in history from an older tracker."),
+         ("list_reviews", "Written App Store reviews, with the day each was first seen."),
+         ("export_backup", "The whole workspace and every stored number as one JSON file, for a backup. Keys are never included."),
+         ("setup_portfolio", "Loads the maker's own Protomota sites, apps and dashboards in one step, as a worked example.")]
 
 
 def mcp():
@@ -573,9 +579,9 @@ FAQ = [("What is Graphley?", "Graphley is a free analytics app for Mac, made by 
        ("Is it free?", "Yes. Graphley is free and source available, with no account, no trial and nothing to unlock. Tips are optional."),
        ("How does it update?", "Graphley checks for new versions and installs signed updates automatically. You can also choose Check for Updates from the Graphley menu."),
        ("Is there an iPhone app?", "The iPhone app is coming soon. It will show the same numbers as your Mac, synced through your own private iCloud database."),
-       ("Which sources does it read?", "Google Analytics 4 for websites, App Store Connect sales reports for app downloads, and public App Store ratings. More sources are planned."),
+       ("Which sources does it read?", "Google Analytics 4 for websites, App Store Connect sales reports for app downloads, App Store ratings and reviews in every storefront, Google Search Console and Bing Webmaster Tools for search, and follower counts from X, Instagram, YouTube and GitHub (Substack and LinkedIn by hand)."),
        ("Where is my data kept?", "On your Mac. Graphley has no server. Sign-in tokens and keys stay in the Keychain."),
-       ("Which AI agents can work with Graphley?", "Claude Code, Codex and Claude chat, through a local MCP server with 16 tools. You choose whether agents can only view, or can also make changes.")]
+       ("Which AI agents can work with Graphley?", "Claude Code, Codex and Claude chat, through a local MCP server with 23 tools. You choose whether agents can only view, or can also make changes.")]
 
 
 def help_page():
