@@ -126,3 +126,8 @@
 .protomota-family-block .family-entry > span:not(.family-arrow),
 .protomota-family-block .family-arrow { align-self: baseline; }
 .protomota-family-block .family-arrow { line-height: 1.25; }
+
+/* 2026-11-25: the status link sits right under the description, even when a neighbour in the row wraps to two lines. */
+.protomota-family-block .family-apps > li > .family-entry { height: auto; }
+/* One arrow per entry, on the status link. */
+.protomota-family-block .family-entry { grid-template-columns: 34px minmax(0, 1fr); }
