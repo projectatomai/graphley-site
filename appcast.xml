@@ -3,15 +3,15 @@
     <channel>
         <title>Graphley</title>
         <item>
-            <title>0.1.8</title>
-            <pubDate>Wed, 25 Nov 2026 00:37:06 -0500</pubDate>
+            <title>0.1.9</title>
+            <pubDate>Wed, 25 Nov 2026 12:36:39 -0500</pubDate>
             <link>https://graphley.ai</link>
-            <sparkle:version>10</sparkle:version>
-            <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
+            <sparkle:version>11</sparkle:version>
+            <sparkle:shortVersionString>0.1.9</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<p>The top bar shows how fresh your numbers are even before the first refresh, numbers reach your iPhone right away, and the App Store downloads card on Overview no longer gets squeezed.</p>
+            <description><![CDATA[<p>The Mac now sends your latest numbers to the iPhone on every launch and after any refresh, so the iPhone app stops waiting for your Mac.</p>
 ]]></description>
-            <enclosure url="https://graphley.ai/downloads/Graphley-0.1.8.dmg" length="3158416" type="application/octet-stream" sparkle:edSignature="8hD5MDIqXz0sf7df79cVZ7wL/nyaSMiglp8cp7Agkl7xpvDEF1J/iAhK3nnakyluqGPsPGAZI0lubWl0BJGiCA=="/>
+            <enclosure url="https://graphley.ai/downloads/Graphley-0.1.9.dmg" length="3161809" type="application/octet-stream" sparkle:edSignature="YGYE7ly7FwqsUmZZNOf8gqiMSUbRpESVLgqvqgaa9qypNX6xsRIrOC5MBwC3biW6P20l1r7BRKLCV+jWrFj2AA=="/>
         </item>
     </channel>
 </rss>
