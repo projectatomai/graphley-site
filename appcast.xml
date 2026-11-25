@@ -4,14 +4,14 @@
         <title>Graphley</title>
         <item>
             <title>0.1.10</title>
-            <pubDate>Wed, 25 Nov 2026 17:57:52 -0500</pubDate>
+            <pubDate>Wed, 25 Nov 2026 18:11:32 -0500</pubDate>
             <link>https://graphley.ai</link>
-            <sparkle:version>16</sparkle:version>
+            <sparkle:version>17</sparkle:version>
             <sparkle:shortVersionString>0.1.10</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<p>Adds SkillFarm to the portfolio, follows Glimmer to glimmertoday.ai, and gives the App downloads dashboard a shorter name.</p>
+            <description><![CDATA[<p>Adds SkillFarm after Glimmer in every list, follows Glimmer to glimmertoday.ai, and gives the App downloads dashboard a shorter name.</p>
 ]]></description>
-            <enclosure url="https://graphley.ai/downloads/Graphley-0.1.10.dmg" length="4017491" type="application/octet-stream" sparkle:edSignature="WAMzi++cJdthncXs6dIgL8LOUOlIMhTTT3StS0zAz+EKWQqwPYIWZmPNNE+by/MJZA6+I51H2i8l9F/rAnIEBw=="/>
+            <enclosure url="https://graphley.ai/downloads/Graphley-0.1.10.dmg" length="4025142" type="application/octet-stream" sparkle:edSignature="DCmQLGja6AwHdWJq1xlV2zRdHC/M4y22tx43WZEotbMUJHJCX9iDxhrnH3+DgFn9T8UPMeToionrJe0yz16NCg=="/>
         </item>
     </channel>
 </rss>
