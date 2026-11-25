@@ -52,7 +52,7 @@ APP = {"@type": "SoftwareApplication", "@id": f"{SITE}/#app", "name": "Graphley"
        "operatingSystem": "macOS 14 or later", "softwareVersion": REL["version"], "isAccessibleForFree": True,
        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock"},
        "downloadUrl": SITE + DMG, "installUrl": f"{SITE}/download/",
-       "image": f"{SITE}/assets/icon.png",
+       "image": f"{SITE}/assets/icon.png?v=20261124",
        "featureList": ["Every website and App Store app in one dashboard", "Google Analytics 4 and App Store Connect sources",
                        "Dashboards you build from charts and numbers", "Compare any period with the one before",
                        "Keys kept in the Keychain, never on a server", "Signed automatic updates",
@@ -95,18 +95,18 @@ def head(path, title, desc, graph, noindex=False, home=False):
             '  <meta property="og:type" content="website">', '  <meta property="og:site_name" content="Graphley">',
             '  <meta property="og:locale" content="en_US">',
             f'  <meta property="og:title" content="{title}">', f'  <meta property="og:description" content="{desc}">',
-            f'  <meta property="og:url" content="{url}">', f'  <meta property="og:image" content="{SITE}/social-card.png">',
+            f'  <meta property="og:url" content="{url}">', f'  <meta property="og:image" content="{SITE}/social-card.png?v=20261124">',
             '  <meta property="og:image:type" content="image/png">',
             '  <meta property="og:image:width" content="1200">', '  <meta property="og:image:height" content="630">',
             '  <meta property="og:image:alt" content="Graphley. Every site and app, one calm chart. Analytics for your Mac. Free and source available.">',
             '  <meta name="twitter:card" content="summary_large_image">', '  <meta name="twitter:site" content="@ProtomotaLab">',
             f'  <meta name="twitter:title" content="{title}">', f'  <meta name="twitter:description" content="{desc}">',
-            f'  <meta name="twitter:image" content="{SITE}/social-card.png">',
+            f'  <meta name="twitter:image" content="{SITE}/social-card.png?v=20261124">',
             '  <meta name="author" content="Brad Dunlap">']
     if home:
         meta += ['  <meta name="google-site-verification" content="0vROIKaO6XMvtjj9IjCOEPsr26qcvrqohH7mbLpWpfk">',
                  '  <meta name="msvalidate.01" content="E2001B47E91F72A19BB1E8E642B26928">']
-    meta += ['  <link rel="icon" href="/favicon.png" type="image/png">', '  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">',
+    meta += ['  <link rel="icon" href="/favicon.png?v=20261124" type="image/png">', '  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20261124">',
              '  <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>',
              '  <link rel="stylesheet" href="/assets/site.css">',
              '  <link rel="stylesheet" href="/protomota-family.css">' if home else None,
@@ -129,7 +129,7 @@ def header(current=None, body_class=None):
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="shell nav">
-      <a class="wordmark" href="/" aria-label="Graphley home"><img src="/assets/icon.png" alt="" width="30" height="30">Graphley</a>
+      <a class="wordmark" href="/" aria-label="Graphley home"><img src="/assets/icon.png?v=20261124" alt="" width="30" height="30">Graphley</a>
       <nav aria-label="Main">
 {links + chr(10) if links else ""}        {cta}
       </nav>
@@ -654,7 +654,7 @@ def privacy():
 
 def notfound():
     h = head("/404", "Page not found · Graphley", "", None, noindex=True) + header(body_class="missing-page") + f'''  <main id="main" class="hero missing-hero shell">
-    <img src="/assets/icon.png" width="66" height="66" alt="">
+    <img src="/assets/icon.png?v=20261124" width="66" height="66" alt="">
     <h1>Page <em>not found.</em></h1>
     <p class="lead">The page may have moved. You can still get back to Graphley or find help.</p>
     <div class="actions">
