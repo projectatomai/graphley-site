@@ -65,7 +65,6 @@ ICON_ARROW = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke
 ICON_CHART = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg>'
 ICON_PLUG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M15 8V2"/><path d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z"/><path d="M9 8V2"/></svg>'
 ICON_BOOK = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>'
-ICON_COFFEE = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h12v7a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Zm12 2h2a3 3 0 0 1 0 6h-2M3 22h15M7 5V2M12 5V2"/></svg>'
 ICON_CHAT = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/></svg>'
 ICON_HOME = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>'
 ICON_HELP = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>'
@@ -73,7 +72,7 @@ ICON_HELP = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke=
 NAV = [("/#dashboards", "Dashboards", "nav-hide"), ("/#iphone", "iPhone", "nav-hide"), ("/#agents", "Agents", "nav-hide"), ("/mcp/", "MCP setup", "nav-hide-sm")]
 FOOT_NAV = [("/download/", "Download"), ("/mcp/", "MCP setup"), ("/help/", "Support"), ("/privacy/", "Privacy"),
             ("https://newsletter.protomota.com/", "Newsletter"), ("https://x.com/ProtomotaLab", "Follow on X"),
-            ("https://buymeacoffee.com/protomotalab", "Buy me a coffee"), ("https://protomota.com/apps?app=graphley#feedback", "Send Feedback")]
+            ("https://protomota.com/apps?app=graphley#feedback", "Send Feedback")]
 
 
 def ld(graph):
@@ -441,16 +440,10 @@ def download():
       </div>
 
       <section class="download-support" aria-labelledby="download-support-title">
-        <span class="support-icon" aria-hidden="true">{ICON_COFFEE}</span>
-        <h2 id="download-support-title">Free software. <span>Supported by people.</span></h2>
-        <p class="support-copy">Every Graphley feature is free. If it saves you time, a tip helps support development and future updates.</p>
-        <a class="button secondary" href="https://buymeacoffee.com/protomotalab" target="_blank" rel="noopener noreferrer">{ICON_COFFEE}Buy me a coffee <span aria-hidden="true">↗</span></a>
-        <p class="support-note">Tips are entirely optional. Graphley remains free.</p>
-        <section class="feedback-section" aria-labelledby="feedback-title">
-          <h3 id="feedback-title">Graphley feedback</h3>
-          <p>Report a bug, suggest a source, or tell us how Graphley is working for you.</p>
-          <a class="button secondary" href="https://protomota.com/apps?app=graphley#feedback">{ICON_CHAT}Send Feedback <span aria-hidden="true">↗</span></a>
-        </section>
+        <span class="support-icon" aria-hidden="true">{ICON_CHAT}</span>
+        <h2 id="download-support-title">Free software. <span>Shaped by people.</span></h2>
+        <p class="support-copy">Every Graphley feature is free, with nothing to unlock. Report a bug, suggest a source, or tell us how Graphley is working for you.</p>
+        <a class="button secondary" href="https://protomota.com/apps?app=graphley#feedback">{ICON_CHAT}Send Feedback <span aria-hidden="true">↗</span></a>
       </section>
 
       <div class="download-get">
@@ -576,7 +569,7 @@ def mcp():
 
 FAQ = [("What is Graphley?", "Graphley is a free analytics app for Mac, made by Protomota. It puts every website and App Store app you run in one dashboard, using Google Analytics 4 and App Store Connect, with no Graphley server. Your AI agents can set it up through its built-in MCP server."),
        ("How do I get it?", "Download the signed and notarized disk image from graphley.ai/download, open it and drag Graphley into Applications. It needs macOS 14 or later."),
-       ("Is it free?", "Yes. Graphley is free and source available, with no account, no trial and nothing to unlock. Tips are optional."),
+       ("Is it free?", "Yes. Graphley is free and source available, with no account, no trial and nothing to unlock."),
        ("How does it update?", "Graphley checks for new versions and installs signed updates automatically. You can also choose Check for Updates from the Graphley menu."),
        ("Is there an iPhone app?", "The iPhone app is coming soon. It will show the same numbers as your Mac, synced through your own private iCloud database."),
        ("Which sources does it read?", "Google Analytics 4 for websites, App Store Connect sales reports for app downloads, App Store ratings and reviews in every storefront, Google Search Console and Bing Webmaster Tools for search, and follower counts from X, Instagram, YouTube and GitHub (Substack and LinkedIn by hand)."),

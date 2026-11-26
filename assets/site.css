@@ -364,7 +364,7 @@ h2 em, h1 em { font-style: normal; color: var(--accent); }
 .discord-callout .button { flex-shrink: 0; }
 @media (max-width: 720px) { .discord-callout { flex-direction: column; align-items: flex-start; padding: 28px 24px; } }
 
-/* Newsletter and coffee, as on the other Protomota sites */
+/* Newsletter and feedback, as on the other Protomota sites */
 .about-protomota { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; padding-bottom: clamp(40px, 6vw, 72px); }
 .about-card { padding: 32px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
 .about-icon { display: block; color: var(--accent); }
@@ -372,10 +372,6 @@ h2 em, h1 em { font-style: normal; color: var(--accent); }
 .about-card p { max-width: 440px; margin-bottom: 22px; color: var(--ink-2); }
 .about-card p.about-note { margin: 20px 0 0; font-size: .8125rem; line-height: 1.6; color: var(--muted); }
 
-.feedback-section { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); }
-.feedback-section h3 { margin: 0 0 6px; font: 650 1.1rem/1.3 var(--sans); }
-.feedback-section p { margin: 0 0 14px; color: var(--ink-2); font-size: .92rem; }
-.download-support .feedback-section .button { margin-top: 0; }
 
 /* Footer, with the app's status bar underneath */
 .footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px; padding-block: 28px; border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem; }
@@ -458,7 +454,6 @@ h2 em, h1 em { font-style: normal; color: var(--accent); }
 .download-support h2 span { display: block; color: var(--accent); }
 .support-copy { margin-top: 12px; font-size: .95rem; line-height: 1.55; color: var(--ink-2); }
 .download-support .button { min-height: 44px; margin-top: 20px; padding: 8px 20px; border-radius: 999px; font-size: .92rem; }
-.support-note { margin-top: 14px; font-size: .9rem; line-height: 1.45; font-weight: 500; color: var(--ink); }
 .download-guide { max-width: 1040px; padding-top: clamp(32px, 5vw, 56px); border-top: 1px solid var(--line); padding-bottom: clamp(40px, 6vw, 64px); }
 .download-guide h2 { margin-bottom: 22px; font-size: clamp(1.8rem, 3.6vw, 2.6rem); }
 .download-guide .install-steps p { margin-block: 8px 0; }
@@ -496,7 +491,6 @@ h2 em, h1 em { font-style: normal; color: var(--accent); }
   .download-support h2 span { display: inline; }
   .support-copy { margin-top: 6px; font-size: .9rem; line-height: 1.5; }
   .download-support .button { width: 100%; min-height: 42px; margin-top: 14px; }
-  .support-note { margin-top: 10px; text-align: center; font-size: .875rem; }
   .download-get { margin-top: 16px; }
   .download-button { width: 100%; }
 }
