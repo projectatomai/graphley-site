@@ -3,15 +3,15 @@
     <channel>
         <title>Graphley</title>
         <item>
-            <title>1.0.0</title>
-            <pubDate>Thu, 26 Nov 2026 11:32:05 -0500</pubDate>
+            <title>1.0.1</title>
+            <pubDate>Thu, 26 Nov 2026 17:22:25 -0500</pubDate>
             <link>https://graphley.ai</link>
-            <sparkle:version>19</sparkle:version>
-            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+            <sparkle:version>20</sparkle:version>
+            <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<p>Sample data on iPhone and iPad, privacy manifest</p>
+            <description><![CDATA[<p>Project ATOM site</p>
 ]]></description>
-            <enclosure url="https://graphley.ai/downloads/Graphley-1.0.0.dmg" length="4041144" type="application/octet-stream" sparkle:edSignature="LVoPWO+ajvGND3+E2e7n+m19bHDGDl2O+W3afEhiRrbVj8684yKg6pJE742DZQvdaJCUSpqr+FtpUxZy/ysNAQ=="/>
+            <enclosure url="https://graphley.ai/downloads/Graphley-1.0.1.dmg" length="4037556" type="application/octet-stream" sparkle:edSignature="O46MDWAmsCAVgxFOJhCY50R1dYn9Nem4KmZ6Lc9E+FirSdFQQ1pVuYHslSqrChdbxn/IaUPawhg6GvBS4TU0Dg=="/>
         </item>
     </channel>
 </rss>
