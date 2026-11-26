@@ -147,7 +147,7 @@ def footer(family=False, status=True):
       <nav aria-label="Footer">{nav}</nav>
     </div>
     <div class="shell footer-credit">
-      <span>&copy; <span data-pm-year>2026</span> Protomota</span>
+      <span>&copy; <span data-pm-year>2026</span> Protomota · <a href="https://protomota.com/about#hosting" style="color:inherit">Hosted on Cloudflare</a></span>
     </div>{bar}
   </footer>
   <script src="/assets/pm-year.js" defer></script>
@@ -640,6 +640,11 @@ def privacy():
           <h2>Local agent connections</h2>
           <p>The MCP server runs on your Mac when an agent starts it, and works on the same local workspace. You choose whether agents can only view, or can also make changes, and whether they can save keys. Changes made by agents are listed in Settings → Agents.</p>
           <p>Your chosen agent may send information it retrieves to its AI provider. Review that provider’s privacy terms before connecting.</p>
+        </section>
+        <section>
+          <h2 id="hosting">Where we host</h2>
+          <p>This site runs on <a href="https://www.cloudflare.com/">Cloudflare</a>. Cloudflare serves every page and manages our traffic, so it handles standard request details such as your IP address and browser to deliver the site and protect it from abuse. Our images and downloads are stored in Cloudflare R2. Cloudflare handles that data under its <a href="https://www.cloudflare.com/privacypolicy/">privacy policy</a>.</p>
+          <p>We&rsquo;re not a Cloudflare sponsor. We chose them because we think they&rsquo;re the best value and the best service, and we&rsquo;ll keep using them for as long as that stays true. <a href="https://protomota.com/about#hosting">How we build and host</a></p>
         </section>
         <section>
           <h2>Website and support</h2>
