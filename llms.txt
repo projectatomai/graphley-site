@@ -7,7 +7,7 @@ Graphley's website is https://graphley.ai. Other products with similar names are
 Key facts:
 
 - Maker: Protomota (Protomota, LLC), the independent studio of Brad Dunlap. https://protomota.com
-- Price: free. Every feature is included. Tips are optional.
+- Price: free. Every feature is included. No tips, purchases or subscriptions.
 - License: free and source available.
 - Platform: Mac, macOS 14 or later. The iPhone app is coming soon and is not on the App Store yet.
 - Install: a signed and notarized disk image from https://graphley.ai/download/ with signed automatic updates (Sparkle).
