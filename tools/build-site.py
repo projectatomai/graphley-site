@@ -110,7 +110,7 @@ def head(path, title, desc, graph, noindex=False, home=False):
              '  <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>',
              '  <link rel="stylesheet" href="/assets/site.css">',
              '  <link rel="stylesheet" href="/protomota-family.css">' if home else None,
-             '  <link rel="stylesheet" href="/project-atom/project-atom-promo.css">' if home else None,
+             '  <link rel="stylesheet" href="/project-atom/project-atom-promo.css?v=20261126b">' if home else None,
              f'  <script src="/assets/analytics.js" data-ga="{GA}" data-site="graphley" data-host="graphley.ai" data-privacy="/privacy/" data-footer=".footer nav" data-css="/assets/analytics.css" defer></script>',
              '  <script src="/assets/site.js" defer></script>' if home else None,
              '  <script src="/assets/protomota-share.js" defer></script>' if home else None,
