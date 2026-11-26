@@ -546,3 +546,16 @@ body > footer::before { content: ""; position: absolute; left: 0; right: 0; bott
 
 /* Cards size to their content: no stretched newsletter card. */
 .about-protomota { align-items: start; }
+
+/* Take action: Protomota's orange-outline pill with a white icon, beside Send Feedback (2026-11-26) */
+:root { --ta: #b4540f; --ta-hover: #8f420b; --ta-icon: #b4540f; --ta-glow: none; }
+@media (prefers-color-scheme: dark) { :root { --ta: #f58025; --ta-hover: #ffa54a; --ta-icon: #fff; --ta-glow: drop-shadow(0 0 3px rgba(245, 128, 37, .55)); } }
+.about-actions, .support-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; }
+.support-actions { margin-top: 20px; }
+.support-actions .button { margin-top: 0; }
+.about-actions .take-action { min-height: 46px; }
+.take-action { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 8px 20px; border: 1px solid color-mix(in oklab, var(--ta) 55%, transparent); border-radius: 999px; background: transparent; color: var(--ta); font-weight: 650; font-size: .92rem; line-height: 1.2; text-decoration: none; white-space: nowrap; transition: background .15s, border-color .15s, color .15s, transform .15s; }
+.take-action svg { flex-shrink: 0; color: var(--ta-icon); filter: var(--ta-glow); }
+.take-action:hover { background: color-mix(in oklab, var(--ta) 12%, transparent); border-color: var(--ta); color: var(--ta-hover); transform: translateY(-1px); }
+.take-action:focus-visible { outline: 2px solid var(--ta); outline-offset: 2px; }
+@media (max-width: 900px) { .support-actions { margin-top: 14px; } .support-actions > a { width: 100%; } }
