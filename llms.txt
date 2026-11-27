@@ -11,8 +11,8 @@ Key facts:
 - License: free and source available.
 - Platform: Mac, macOS 14 or later. The iPhone app is coming soon and is not on the App Store yet.
 - Install: a signed and notarized disk image from https://graphley.ai/download/ with signed automatic updates (Sparkle).
-- Download: https://graphley.ai/downloads/Graphley-1.0.2.dmg
-- Current release: Graphley 1.0.2 (build 21), 4.0 MB. SHA-256: ef6c67d130d495a1fe1e33098b26245becd8acffd25ea43b433b3ce943646e05
+- Download: https://graphley.ai/downloads/Graphley-1.0.3.dmg
+- Current release: Graphley 1.0.3 (build 22), 4.0 MB. SHA-256: 12c118f5d9fd1d6876f996a911b9851bd2abcdb98f3c60ca593e0e1809f31d11
 - Sources: Google Analytics 4 (read-only Google sign-in) for visitors, new visitors, sessions, page views, key events and top pages; App Store Connect sales reports (an API key with Sales and Trends access) for first downloads and redownloads by app and device; App Store ratings and written reviews in every storefront; Google Search Console and Bing Webmaster Tools clicks, impressions and position; follower counts from X, Instagram, YouTube and GitHub, with Substack and LinkedIn recorded by hand.
 - Dashboards: an overview of every site and app, a page per site, and dashboards built from line charts, bars and single numbers. Every number compares against the period before (7, 30 or 90 days).
 - Refresh: every morning at a chosen hour, on launch if missed, with Command-R, or when an agent asks. A failing source is skipped and flagged.
