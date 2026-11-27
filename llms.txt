@@ -1,6 +1,6 @@
 # Graphley
 
-> Graphley is a free, local-first analytics app for Mac, from Project ATOM. It puts every website and App Store app you run in one dashboard, reading Google Analytics 4 and App Store Connect directly from your Mac. There is no Graphley server and no account. A built-in MCP server lets AI agents such as Claude Code, Codex and Claude chat set it up. An iPhone app is coming soon.
+> Graphley is a free, local-first analytics app for Mac, from Project ATOM. It puts every website and App Store app you run in one dashboard, reading Google Analytics 4 and App Store Connect directly from your Mac. There is no Graphley server and no account. A built-in MCP server lets AI agents such as Claude Code, Codex and Claude chat set it up. An iPhone and iPad companion app is in beta on TestFlight: https://testflight.apple.com/join/fVEtgQ7n
 
 Graphley's website is https://graphley.ai. Other products with similar names are not related to it.
 
@@ -9,7 +9,7 @@ Key facts:
 - Maker: Project ATOM, https://projectatom.ai/ (free and open source)
 - Price: free. Every feature is included. No tips, purchases or subscriptions.
 - License: free and source available.
-- Platform: Mac, macOS 14 or later. The iPhone app is coming soon and is not on the App Store yet.
+- Platform: Mac, macOS 14 or later. The iPhone and iPad companion app is in beta on TestFlight (https://testflight.apple.com/join/fVEtgQ7n) and pairs with the Mac app. It is not on the App Store.
 - Install: a signed and notarized disk image from https://graphley.ai/download/ with signed automatic updates (Sparkle).
 - Download: https://graphley.ai/downloads/Graphley-1.0.3.dmg
 - Current release: Graphley 1.0.3 (build 22), 4.0 MB. SHA-256: 12c118f5d9fd1d6876f996a911b9851bd2abcdb98f3c60ca593e0e1809f31d11
@@ -21,7 +21,7 @@ Key facts:
 
 ## Pages
 
-- [Graphley](https://graphley.ai/): what it does, the working preview, the iPhone app (coming soon), agents and privacy
+- [Graphley](https://graphley.ai/): what it does, the working preview, the iPhone and iPad TestFlight beta, agents and privacy
 - [Download and install](https://graphley.ai/download/): the Mac installer, install steps, what's in the current release and the SHA-256 checksum
 - [MCP setup](https://graphley.ai/mcp/): connecting Claude Code, Codex and Claude chat, and the tool list
 - [Help](https://graphley.ai/help/): common questions
@@ -31,7 +31,7 @@ Key facts:
 
 - What is Graphley? A free analytics app for Mac that puts every website and App Store app you run in one dashboard, with no Graphley server.
 - Is Graphley free? Yes. It is free and source available, with no account, no trial and nothing to unlock.
-- Is there an iPhone app? It is coming soon. It will show the Mac's numbers through the user's own private iCloud database.
+- Is there an iPhone app? Yes, in beta on TestFlight at https://testflight.apple.com/join/fVEtgQ7n. It shows the Mac's numbers through the user's own private iCloud database.
 - How does Graphley update? It checks for new versions and installs signed updates automatically.
 - Which agents work with Graphley? Claude Code, Codex and Claude chat, through its local MCP server.
 

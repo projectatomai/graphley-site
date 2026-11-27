@@ -14,7 +14,7 @@ SITE = "https://graphley.ai"
 GA = "G-5X9MHZPLGK"
 DESC = ("Graphley is a free, local-first analytics app for Mac. It puts every website and App Store app you run "
         "in one dashboard, from Google Analytics and App Store Connect, with no Graphley server. Your AI agents "
-        "can set it up through its built-in MCP server. Free and source available. iPhone app coming soon.")
+        "can set it up through its built-in MCP server. Free and source available. iPhone and iPad beta on TestFlight.")
 TITLE = "Graphley · Your sites and apps in one dashboard, on your Mac"
 FAMILY = open(os.path.join(ROOT, "tools", "family.html")).read()
 
@@ -58,6 +58,9 @@ APP = {"@type": "SoftwareApplication", "@id": f"{SITE}/#app", "name": "Graphley"
        "sameAs": ["https://projectatom.ai/apps"]}
 
 APPLE = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>'
+TESTFLIGHT = "https://testflight.apple.com/join/fVEtgQ7n"
+TF_NOTE = "iPhone and iPad companion beta. Pairs with the Mac&nbsp;app."
+TF_BUTTON = f'<a class="button secondary testflight-button" href="{TESTFLIGHT}" target="_blank" rel="noopener noreferrer">{APPLE} Join the TestFlight beta <span aria-hidden="true">↗</span></a>'
 ICON_ARROW = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>'
 ICON_CHART = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg>'
 ICON_PLUG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M15 8V2"/><path d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z"/><path d="M9 8V2"/></svg>'
@@ -246,7 +249,7 @@ def phone():
 {out}
             </div>
           </div>
-          <figcaption>iPhone app coming soon · sample data</figcaption>
+          <figcaption>iPhone and iPad beta on TestFlight · sample data</figcaption>
         </figure>
 '''
 
@@ -330,14 +333,18 @@ def index():
     <section id="iphone" class="section band">
       <div class="shell split">
         <div>
-          <span class="mark">iphone · coming soon</span>
+          <span class="mark">iphone and ipad · testflight beta</span>
           <h2>Check it <em>from anywhere.</em></h2>
-          <p class="lead">The iPhone app is coming soon. It will show the same numbers as your Mac: your Mac does the fetching and writes a snapshot to your private iCloud database, and your iPhone reads it.</p>
+          <p class="lead">The iPhone and iPad app is in beta on TestFlight. It shows the same numbers as your Mac: your Mac does the fetching and writes a snapshot to your private iCloud database, and your iPhone reads&nbsp;it.</p>
           <ul class="ticks">
             <li><span><strong>Your iCloud, not ours.</strong> Data syncs through your own private CloudKit database. Graphley has no server to send it to.</span></li>
             <li><span><strong>Keys stay on the Mac.</strong> Google and App Store Connect credentials live in the Keychain and never travel with the numbers.</span></li>
             <li><span><strong>Fresh in the morning.</strong> When the Mac refreshes, the phone gets a quiet push and updates.</span></li>
           </ul>
+          <div class="actions actions-left">
+            {TF_BUTTON}
+          </div>
+          <p class="fineprint">{TF_NOTE}</p>
         </div>
 {phone()}      </div>
     </section>
@@ -402,7 +409,9 @@ def index():
           <div class="actions">
             <a class="button" href="/download/">{APPLE} Download and install</a>
             <a class="button secondary" href="/mcp/">{ICON_PLUG}MCP setup</a>
+            {TF_BUTTON}
           </div>
+          <p class="fineprint">{TF_NOTE}</p>
         </div>
         <ol class="install-steps" aria-label="Getting started">
 {steps}
@@ -450,6 +459,10 @@ def download():
         <a class="button download-button" href="{DMG}" download>{APPLE.replace('width="16" height="16"', 'width="20" height="20"')}<span>Download Graphley {rel("version")}</span></a>
         <p class="fineprint">macOS 14 or later · Version {rel("version")} (build {rel("build")}) · {rel("size")}</p>
         <p class="fineprint">Code signed · Notarized by Apple · Signed automatic updates</p>
+        <div class="testflight-get">
+          {TF_BUTTON}
+          <p class="fineprint">{TF_NOTE}</p>
+        </div>
       </div>
     </div>
 
@@ -479,7 +492,7 @@ def download():
           </tbody>
         </table>
       </div>
-      <p>The iPhone app and Home Screen widgets are coming. Check back at <a href="https://projectatom.ai/">projectatom.ai</a> for more information.</p>
+      <p>The iPhone and iPad companion app is in beta on <a href="{TESTFLIGHT}" target="_blank" rel="noopener noreferrer">TestFlight</a>. It pairs with the Mac app and shows the same&nbsp;numbers.</p>
     </section>
   </main>
 ''' + footer(status=False)
@@ -571,7 +584,7 @@ FAQ = [("What is Graphley?", "Graphley is a free analytics app for Mac, from Pro
        ("How do I get it?", "Download the signed and notarized disk image from graphley.ai/download, open it and drag Graphley into Applications. It needs macOS 14 or later."),
        ("Is it free?", "Yes. Graphley is free and source available, with no account, no trial and nothing to unlock."),
        ("How does it update?", "Graphley checks for new versions and installs signed updates automatically. You can also choose Check for Updates from the Graphley menu."),
-       ("Is there an iPhone app?", "The iPhone app is coming soon. It will show the same numbers as your Mac, synced through your own private iCloud database."),
+       ("Is there an iPhone app?", f"Yes, in beta. Join the iPhone and iPad beta on TestFlight at {TESTFLIGHT}. It shows the same numbers as your Mac, synced through your own private iCloud database."),
        ("Which sources does it read?", "Google Analytics 4 for websites, App Store Connect sales reports for app downloads, App Store ratings and reviews in every storefront, Google Search Console and Bing Webmaster Tools for search, and follower counts from X, Instagram, YouTube and GitHub (Substack and LinkedIn by hand)."),
        ("Where is my data kept?", "On your Mac. Graphley has no server. Sign-in tokens and keys stay in the Keychain."),
        ("Which AI agents can work with Graphley?", "Claude Code, Codex and Claude chat, through a local MCP server with 23 tools. You choose whether agents can only view, or can also make changes.")]
@@ -630,7 +643,7 @@ def privacy():
         </section>
         <section>
           <h2>iPhone and iCloud</h2>
-          <p>When the iPhone app is available, the Mac will write a snapshot of your numbers to your private iCloud database so your iPhone can show them. Only you can read it. Keys and tokens are never part of the snapshot.</p>
+          <p>When you use the iPhone and iPad app, the Mac writes a snapshot of your numbers to your private iCloud database so your iPhone can show them. Only you can read it. Keys and tokens are never part of the snapshot.</p>
         </section>
         <section id="mcp">
           <h2>Local agent connections</h2>

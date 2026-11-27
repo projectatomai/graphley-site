@@ -441,6 +441,8 @@ h2 em, h1 em { font-style: normal; color: var(--accent); }
 }
 .download-button svg { margin-top: -3px; }
 .download-get .fineprint + .fineprint { margin-top: 4px; }
+.testflight-get { margin-top: 28px; }
+.testflight-get .fineprint { margin-top: 10px; }
 .download-support {
   grid-area: card; position: relative; overflow: hidden;
   padding: 30px 30px 28px;
@@ -493,6 +495,7 @@ h2 em, h1 em { font-style: normal; color: var(--accent); }
   .download-support .button { width: 100%; min-height: 42px; margin-top: 14px; }
   .download-get { margin-top: 16px; }
   .download-button { width: 100%; }
+  .testflight-get .button { width: 100%; }
 }
 @media (max-width: 720px) {
   .shell { width: calc(100% - 32px); }
