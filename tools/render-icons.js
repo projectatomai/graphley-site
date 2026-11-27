@@ -2,7 +2,7 @@
 // Run from the repository root: node tools/render-icons.js [out-dir-for-sibling-icons]
 // Writes assets/icon.png (512, rounded), favicon.png (64, rounded), assets/apple-touch-icon.png
 // (180, square; iOS rounds it). With an out dir it also writes graphley-96.png and graphley-144.png
-// for the More from Protomota blocks and protomota.com (convert the 96 to WebP with cwebp).
+// for the More from Project ATOM blocks and protomota.com (convert the 96 to WebP with cwebp).
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');

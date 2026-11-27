@@ -1,6 +1,6 @@
 /* Graphley site. The "Tide table" direction: a calm sea-glass ground, harbor-blue ink,
    a sturdy grotesk for headings and mono figures that line up, one color per site.
-   Same structure as the other Protomota app sites. The page's own motif is the tide
+   Same structure as the other app sites. The page's own motif is the tide
    chart: faint ruled lines behind the hero, a working dashboard in it, and a status
    bar at the foot. The site follows the system appearance; the preview has its own toggle. */
 
@@ -57,7 +57,7 @@
   --display: "Bricolage Grotesque", "Instrument Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
   --sans: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
-  /* Names the shared Protomota block expects from its host site. */
+  /* Names the shared apps block expects from its host site. */
   --paper: var(--ink);
   --signal: var(--accent);
   --rule: var(--line);
@@ -364,8 +364,8 @@ h2 em, h1 em { font-style: normal; color: var(--accent); }
 .discord-callout .button { flex-shrink: 0; }
 @media (max-width: 720px) { .discord-callout { flex-direction: column; align-items: flex-start; padding: 28px 24px; } }
 
-/* Newsletter and feedback, as on the other Protomota sites */
-.about-protomota { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; padding-bottom: clamp(40px, 6vw, 72px); }
+/* Newsletter and feedback, as on the other sites */
+.about-us { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; padding-bottom: clamp(40px, 6vw, 72px); }
 .about-card { padding: 32px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
 .about-icon { display: block; color: var(--accent); }
 .about-card h2 { margin: 20px 0 12px; font: 650 1.75rem/1.15 var(--sans); letter-spacing: -.03em; }
@@ -420,7 +420,7 @@ h2 em, h1 em { font-style: normal; color: var(--accent); }
 .status.now { color: var(--up); }
 .status.now::before { background: var(--up); }
 
-/* Download page. As on the other Protomota app sites, the support card and the
+/* Download page. As on the other app sites, the support card and the
    download sit side by side: support card on the left, download on the right. On narrow
    screens they stack: title, support card, download. */
 .download-intro {
@@ -468,7 +468,7 @@ h2 em, h1 em { font-style: normal; color: var(--accent); }
 .missing-page main { flex: 1 0 auto; }
 .missing-editor .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 
-/* Share pill (2026-11-21), behavior in assets/protomota-share.js */
+/* Share pill (2026-11-21), behavior in assets/share.js */
 .pm-share-btn.gx-share { --pm-share-accent: var(--accent); --pm-share-line: color-mix(in srgb, var(--accent) 60%, transparent); --pm-share-glow: color-mix(in srgb, var(--accent) 18%, transparent); --pm-share-glow-hover: color-mix(in srgb, var(--accent) 34%, transparent); color: var(--ink); background: color-mix(in srgb, var(--surface) 70%, transparent); height: 46px; padding: 0 22px 0 18px; }
 
 @media (max-width: 960px) {
@@ -502,7 +502,7 @@ h2 em, h1 em { font-style: normal; color: var(--accent); }
   .facts div + div { padding-left: 16px; }
   .facts div:nth-child(3) { padding-left: 0; border-left: 0; }
   .facts div:nth-child(n + 3) { border-top: 1px solid var(--line); }
-  .bento, .trio, .about-protomota { grid-template-columns: minmax(0, 1fr); }
+  .bento, .trio, .about-us { grid-template-columns: minmax(0, 1fr); }
   .about-card { padding: 24px 20px; }
   .install-steps li { padding: 18px; }
   /* The preview: the sidebar becomes a scrolling row of sites above the dashboard. */
@@ -545,9 +545,9 @@ body > footer { position: relative; }
 body > footer::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 56px; background: url("/assets/tide-band.svg") center bottom / 100% 100% no-repeat; pointer-events: none; }
 
 /* Cards size to their content: no stretched newsletter card. */
-.about-protomota { align-items: start; }
+.about-us { align-items: start; }
 
-/* Take action: Protomota's orange-outline pill with a white icon, beside Send Feedback (2026-11-26) */
+/* Take action: our orange-outline pill with a white icon, beside Send Feedback (2026-11-26) */
 :root { --ta: #b4540f; --ta-hover: #8f420b; --ta-icon: #b4540f; --ta-glow: none; }
 @media (prefers-color-scheme: dark) { :root { --ta: #f58025; --ta-hover: #ffa54a; --ta-icon: #fff; --ta-glow: drop-shadow(0 0 3px rgba(245, 128, 37, .55)); } }
 .about-actions, .support-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; }

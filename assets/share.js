@@ -1,5 +1,5 @@
-/* Protomota Share (2026-11-21)
-   One small script shared by every Protomota site.
+/* Share (2026-11-21)
+   One small script shared by every one of our sites.
    Any element with [data-pm-share] becomes a Share button:
    - phones and tablets (touch) open the native share sheet (Web Share API)
    - desktops get a small menu: Copy link, X, LinkedIn, Facebook, Email

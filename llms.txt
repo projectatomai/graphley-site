@@ -1,12 +1,12 @@
 # Graphley
 
-> Graphley is a free, local-first analytics app for Mac, made by Protomota. It puts every website and App Store app you run in one dashboard, reading Google Analytics 4 and App Store Connect directly from your Mac. There is no Graphley server and no account. A built-in MCP server lets AI agents such as Claude Code, Codex and Claude chat set it up. An iPhone app is coming soon.
+> Graphley is a free, local-first analytics app for Mac, from Project ATOM. It puts every website and App Store app you run in one dashboard, reading Google Analytics 4 and App Store Connect directly from your Mac. There is no Graphley server and no account. A built-in MCP server lets AI agents such as Claude Code, Codex and Claude chat set it up. An iPhone app is coming soon.
 
 Graphley's website is https://graphley.ai. Other products with similar names are not related to it.
 
 Key facts:
 
-- Maker: Protomota (Protomota, LLC), the independent studio of Brad Dunlap. https://protomota.com
+- Maker: Project ATOM, https://projectatom.ai/ (free and open source)
 - Price: free. Every feature is included. No tips, purchases or subscriptions.
 - License: free and source available.
 - Platform: Mac, macOS 14 or later. The iPhone app is coming soon and is not on the App Store yet.
@@ -37,5 +37,4 @@ Key facts:
 
 ## Optional
 
-- [Graphley on protomota.com](https://protomota.com/apps)
-- [More Protomota apps](https://protomota.com/apps): OpenTalon, Inkspring, Jotley, Glimmer, PulseCanvas Studio, Voxley and Textley
+- [More Project ATOM apps](https://projectatom.ai/apps): OpenTalon, Inkspring, Jotley, Glimmer, PulseCanvas Studio, Voxley and Textley

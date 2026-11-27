@@ -1,4 +1,4 @@
-.protomota-family-block {
+.atom-family-block {
   --family-text: var(--paper);
   --family-muted: var(--muted);
   --family-link: var(--signal);
@@ -6,19 +6,19 @@
   --family-heading: var(--display);
 }
 /* Studio credit and sibling apps. Host sites supply their existing type and palette. */
-.protomota-family-block {
+.atom-family-block {
   color: var(--family-text);
   text-align: left;
   padding-block: clamp(28px, 4vw, 54px);
 }
-.protomota-family-block .family-inner {
+.atom-family-block .family-inner {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   gap: clamp(22px, 4vw, 56px);
   padding-block-start: clamp(22px, 3vw, 34px);
   border-block-start: 1px solid var(--family-rule);
 }
-.protomota-family-block .family-title {
+.atom-family-block .family-title {
   margin: 0 0 10px;
   font-family: var(--family-heading, inherit);
   font-size: clamp(21px, 2.1vw, 29px);
@@ -26,14 +26,14 @@
   line-height: 1.16;
   letter-spacing: -.025em;
 }
-.protomota-family-block .family-about p {
+.atom-family-block .family-about p {
   max-width: 32ch;
   margin: 0 0 12px;
   color: var(--family-muted);
   font-size: .875rem;
   line-height: 1.5;
 }
-.protomota-family-block .family-hub {
+.atom-family-block .family-hub {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -44,7 +44,7 @@
   font-size: .875rem;
   font-weight: 650;
 }
-.protomota-family-block .family-apps {
+.atom-family-block .family-apps {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-content: start;
@@ -53,7 +53,7 @@
   padding: 0;
   list-style: none;
 }
-.protomota-family-block .family-entry {
+.atom-family-block .family-entry {
   display: grid;
   grid-template-columns: 34px minmax(0, 1fr) auto;
   align-items: center;
@@ -64,48 +64,48 @@
   color: inherit;
   text-decoration: none;
 }
-.protomota-family-block .family-entry img {
+.atom-family-block .family-entry img {
   display: block;
   width: 34px;
   height: 34px;
   object-fit: contain;
   border-radius: 8px;
 }
-.protomota-family-block .family-entry strong,
-.protomota-family-block .family-detail { display: block; }
-.protomota-family-block .family-entry strong { font-size: .875rem; line-height: 1.25; }
-.protomota-family-block .family-detail {
+.atom-family-block .family-entry strong,
+.atom-family-block .family-detail { display: block; }
+.atom-family-block .family-entry strong { font-size: .875rem; line-height: 1.25; }
+.atom-family-block .family-detail {
   margin-block-start: 3px;
   color: var(--family-muted);
   font-size: .8125rem;
   line-height: 1.35;
 }
-.protomota-family-block .family-status { grid-template-columns: 34px minmax(0, 1fr); }
-.protomota-family-block .family-arrow { color: var(--family-link); font-size: .875rem; }
-.protomota-family-block a.family-entry:is(:hover, :focus-visible) {
+.atom-family-block .family-status { grid-template-columns: 34px minmax(0, 1fr); }
+.atom-family-block .family-arrow { color: var(--family-link); font-size: .875rem; }
+.atom-family-block a.family-entry:is(:hover, :focus-visible) {
   background: color-mix(in srgb, currentColor 5%, transparent);
   border-radius: 8px;
 }
-.protomota-family-block a.family-entry:is(:hover, :focus-visible) strong {
+.atom-family-block a.family-entry:is(:hover, :focus-visible) strong {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-.protomota-family-block a:focus-visible {
+.atom-family-block a:focus-visible {
   outline: 2px solid var(--family-link);
   outline-offset: 3px;
 }
 @media (max-width: 760px) {
-  .protomota-family-block .family-inner { grid-template-columns: 1fr; }
+  .atom-family-block .family-inner { grid-template-columns: 1fr; }
 }
 @media (max-width: 450px) {
-  .protomota-family-block .family-apps { grid-template-columns: 1fr; }
+  .atom-family-block .family-apps { grid-template-columns: 1fr; }
 }
 
 /* App status under each entry (2026-11-12): App Store link or Coming soon. */
-.protomota-family-block .family-apps > li { display: flex; flex-direction: column; }
-.protomota-family-block .family-entry { min-height: 52px; padding-block-end: 2px; }
-.protomota-family-block .family-store,
-.protomota-family-block .family-soon {
+.atom-family-block .family-apps > li { display: flex; flex-direction: column; }
+.atom-family-block .family-entry { min-height: 52px; padding-block-end: 2px; }
+.atom-family-block .family-store,
+.atom-family-block .family-soon {
   align-self: flex-start;
   margin: 0 0 6px 48px;
   font-size: .75rem;
@@ -113,23 +113,23 @@
   line-height: 1.3;
   letter-spacing: .01em;
 }
-.protomota-family-block .family-store { color: var(--family-link); text-decoration: none; }
-.protomota-family-block .family-store:is(:hover, :focus-visible) { text-decoration: underline; text-underline-offset: 3px; }
-.protomota-family-block .family-soon { color: var(--family-muted); }
+.atom-family-block .family-store { color: var(--family-link); text-decoration: none; }
+.atom-family-block .family-store:is(:hover, :focus-visible) { text-decoration: underline; text-underline-offset: 3px; }
+.atom-family-block .family-soon { color: var(--family-muted); }
 
 
 /* 2026-11-24: icon, title and arrow share the title line; icons load eagerly. */
-.protomota-family-block .family-entry { align-items: start; }
-.protomota-family-block .family-entry > span:not(.family-arrow),
-.protomota-family-block .family-arrow { align-self: baseline; }
-.protomota-family-block .family-arrow { line-height: 1.25; }
+.atom-family-block .family-entry { align-items: start; }
+.atom-family-block .family-entry > span:not(.family-arrow),
+.atom-family-block .family-arrow { align-self: baseline; }
+.atom-family-block .family-arrow { line-height: 1.25; }
 
 /* 2026-11-25: the status link sits right under the description, even when a neighbour in the row wraps to two lines. */
-.protomota-family-block .family-apps > li > .family-entry { height: auto; }
+.atom-family-block .family-apps > li > .family-entry { height: auto; }
 /* One arrow per entry, on the status link. */
-.protomota-family-block .family-entry { grid-template-columns: 34px minmax(0, 1fr); }
+.atom-family-block .family-entry { grid-template-columns: 34px minmax(0, 1fr); }
 
-/* App icons (Brad, 2026-11-25): every app icon always shows a visible edge plus a soft
+/* App icons (2026-11-25): every app icon always shows a visible edge plus a soft
    shadow on light backgrounds or a soft glow on dark ones. Opaque rounded-square icons use
    box-shadow (it follows border-radius); transparent icons use drop-shadow. */
 :root {
@@ -146,7 +146,7 @@
   --app-icon-shadow: 0 0 0 1px rgba(255, 255, 255, .10), 0 4px 14px rgba(0, 0, 0, .55), 0 0 18px rgba(255, 255, 255, .08);
   --app-icon-drop: drop-shadow(0 0 .5px rgba(255, 255, 255, .50)) drop-shadow(0 4px 10px rgba(0, 0, 0, .55)) drop-shadow(0 0 9px rgba(255, 255, 255, .12));
 }
-.protomota-family-block .family-entry img,
+.atom-family-block .family-entry img,
 .product-credit img {
   box-shadow: var(--app-icon-shadow);
   filter: none;

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Writes the graphley-site pages (index, download, mcp, help, privacy, 404) on the house app-site
 template, with one shared head, header and footer. tools/family.html is the template's home-page
-tail (Discord and newsletter callouts, </main>, the More from Protomota block), kept unchanged
+tail (Discord and newsletter callouts, </main>, the More from Project ATOM block), kept unchanged
 apart from the app name.
 
 The current release (version, build, size, SHA-256) is read back from the download page, so
@@ -42,11 +42,8 @@ def rel(key):
     return f'<{tag} data-release="{key}">{REL[key]}</{tag}>'
 
 
-ORG = {"@type": "Organization", "@id": "https://protomota.com/#protomota", "name": "Protomota", "legalName": "Protomota, LLC",
-       "url": "https://protomota.com/", "logo": "https://protomota.com/redesign/logo.png", "founder": {"@id": "https://protomota.com/#brad"},
-       "sameAs": ["https://github.com/protomota", "https://x.com/protomotalab", "https://youtube.com/@protomota", "https://newsletter.protomota.com"]}
-PERSON = {"@type": "Person", "@id": "https://protomota.com/#brad", "name": "Brad Dunlap", "url": "https://protomota.com/about",
-          "sameAs": ["https://www.linkedin.com/in/brad--dunlap/", "https://github.com/protomota"]}
+ORG = {"@type": "Organization", "@id": "https://projectatom.ai/#org", "name": "Project ATOM", "url": "https://projectatom.ai/",
+       "logo": "https://projectatom.ai/action/atom/atom-lockup.webp"}
 APP = {"@type": "SoftwareApplication", "@id": f"{SITE}/#app", "name": "Graphley", "url": f"{SITE}/", "description": DESC,
        "applicationCategory": "BusinessApplication", "applicationSubCategory": "Web and app analytics",
        "operatingSystem": "macOS 14 or later", "softwareVersion": REL["version"], "isAccessibleForFree": True,
@@ -57,8 +54,8 @@ APP = {"@type": "SoftwareApplication", "@id": f"{SITE}/#app", "name": "Graphley"
                        "Dashboards you build from charts and numbers", "Compare any period with the one before",
                        "Keys kept in the Keychain, never on a server", "Signed automatic updates",
                        "Built-in MCP server with 23 tools for Claude Code, Codex and Claude chat"],
-       "author": {"@id": "https://protomota.com/#brad"}, "publisher": {"@id": "https://protomota.com/#protomota"},
-       "sameAs": ["https://protomota.com/apps"]}
+       "author": {"@id": "https://projectatom.ai/#org"}, "publisher": {"@id": "https://projectatom.ai/#org"},
+       "sameAs": ["https://projectatom.ai/apps"]}
 
 APPLE = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>'
 ICON_ARROW = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>'
@@ -72,8 +69,7 @@ ICON_HELP = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke=
 
 NAV = [("/#dashboards", "Dashboards", "nav-hide"), ("/#iphone", "iPhone", "nav-hide"), ("/#agents", "Agents", "nav-hide"), ("/mcp/", "MCP setup", "nav-hide-sm")]
 FOOT_NAV = [("/download/", "Download"), ("/mcp/", "MCP setup"), ("/help/", "Support"), ("/privacy/", "Privacy"),
-            ("https://newsletter.protomota.com/", "Newsletter"), ("https://x.com/ProtomotaLab", "Follow on X"),
-            ("https://projectatom.ai/", "Project ATOM"), ("https://protomota.com/apps?app=graphley#feedback", "Send Feedback")]
+            ("https://projectatom.ai/", "Project ATOM"), ("https://projectatom.ai/apps?app=graphley#feedback", "Send Feedback")]
 
 
 def ld(graph):
@@ -99,21 +95,21 @@ def head(path, title, desc, graph, noindex=False, home=False):
             '  <meta property="og:image:type" content="image/png">',
             '  <meta property="og:image:width" content="1200">', '  <meta property="og:image:height" content="630">',
             '  <meta property="og:image:alt" content="Graphley. Every site and app, one calm chart. Analytics for your Mac. Free and source available.">',
-            '  <meta name="twitter:card" content="summary_large_image">', '  <meta name="twitter:site" content="@ProtomotaLab">',
+            '  <meta name="twitter:card" content="summary_large_image">',
             f'  <meta name="twitter:title" content="{title}">', f'  <meta name="twitter:description" content="{desc}">',
             f'  <meta name="twitter:image" content="{SITE}/social-card.png?v=20261124">',
-            '  <meta name="author" content="Brad Dunlap">']
+            '  <meta name="author" content="Project ATOM">']
     if home:
         meta += ['  <meta name="google-site-verification" content="0vROIKaO6XMvtjj9IjCOEPsr26qcvrqohH7mbLpWpfk">',
                  '  <meta name="msvalidate.01" content="E2001B47E91F72A19BB1E8E642B26928">']
     meta += ['  <link rel="icon" href="/favicon.png?v=20261124" type="image/png">', '  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20261124">',
              '  <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>',
              '  <link rel="stylesheet" href="/assets/site.css">',
-             '  <link rel="stylesheet" href="/protomota-family.css">' if home else None,
+             '  <link rel="stylesheet" href="/atom-family.css">' if home else None,
              '  <link rel="stylesheet" href="/project-atom/project-atom-promo.css?v=20261126b">' if home else None,
              f'  <script src="/assets/analytics.js" data-ga="{GA}" data-site="graphley" data-host="graphley.ai" data-privacy="/privacy/" data-footer=".footer nav" data-css="/assets/analytics.css" defer></script>',
              '  <script src="/assets/site.js" defer></script>' if home else None,
-             '  <script src="/assets/protomota-share.js" defer></script>' if home else None,
+             '  <script src="/assets/share.js" defer></script>' if home else None,
              f'  <title>{title}</title>', ('  ' + ld(graph)) if graph else None]
     return '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n' + "\n".join(m for m in meta if m) + "\n</head>\n"
 
@@ -144,11 +140,11 @@ def footer(family=False, status=True):
     bar = '\n    <div class="statusbar" aria-hidden="true"><div class="shell"><span><i></i>Synced to iCloud</span><span class="grow"></span><span>Last 30 days</span><span>All sites</span><span>Refreshed 7:02 AM</span></div></div>' if status else ""
     return (FAMILY if family else "") + f'''  <footer>
     <div class="shell footer">
-      <a class="product-credit" href="https://protomota.com/" target="_blank" rel="noopener noreferrer"><img src="/assets/protomota-logo.png" width="22" height="22" alt=""><span>A Protomota Product</span></a>
+      <a class="product-credit" href="https://projectatom.ai/" target="_blank" rel="noopener noreferrer"><img src="/project-atom/atom-credit.webp" width="46" height="20" alt="" style="width:46px;height:20px;border-radius:0;box-shadow:none;outline:0;border:0;filter:none"><span>A Project ATOM project</span></a>
       <nav aria-label="Footer">{nav}</nav>
     </div>
     <div class="shell footer-credit">
-      <span>&copy; <span data-pm-year>2026</span> Protomota · <a href="https://protomota.com/about#hosting" style="color:inherit">Hosted on Cloudflare</a></span>
+      <span>Hosted on Cloudflare</span>
     </div>{bar}
   </footer>
   <script src="/assets/pm-year.js" defer></script>
@@ -164,7 +160,7 @@ def crumbs(name, path):
 
 def webpage(path, name, desc):
     return {"@type": "WebPage", "@id": f"{SITE}{path}#webpage", "url": SITE + path, "name": name, "description": desc,
-            "isPartOf": {"@id": f"{SITE}/#website"}, "inLanguage": "en-US", "publisher": {"@id": "https://protomota.com/#protomota"},
+            "isPartOf": {"@id": f"{SITE}/#website"}, "inLanguage": "en-US", "publisher": {"@id": "https://projectatom.ai/#org"},
             "about": {"@id": f"{SITE}/#app"}}
 
 
@@ -262,8 +258,8 @@ INSTALL_STEPS = [("Open the disk image", "and drag Graphley into Applications.")
 
 def index():
     graph = [{"@type": "WebSite", "@id": f"{SITE}/#website", "url": SITE + "/", "name": "Graphley", "description": DESC, "inLanguage": "en-US",
-              "publisher": {"@id": "https://protomota.com/#protomota"}},
-             {**webpage("/", TITLE, DESC), "mainEntity": {"@id": f"{SITE}/#app"}}, APP, ORG, PERSON]
+              "publisher": {"@id": "https://projectatom.ai/#org"}},
+             {**webpage("/", TITLE, DESC), "mainEntity": {"@id": f"{SITE}/#app"}}, APP, ORG]
     steps = "\n".join(f'          <li><span><strong>{a}</strong> {b}</span></li>' for a, b in INSTALL_STEPS)
     h = head("/", TITLE, DESC, graph, home=True) + header()
     h += f'''
@@ -402,7 +398,7 @@ def index():
         <div>
           <span class="mark">download</span>
           <h2 id="download-title">Graphley for <em>Mac.</em></h2>
-          <p class="lead">Free for Macs running macOS 14 or later. Signed by Protomota, notarized by Apple, and kept up to date automatically.</p>
+          <p class="lead">Free for Macs running macOS 14 or later. Code signed, notarized by Apple, and kept up to date automatically.</p>
           <div class="actions">
             <a class="button" href="/download/">{APPLE} Download and install</a>
             <a class="button secondary" href="/mcp/">{ICON_PLUG}MCP setup</a>
@@ -415,7 +411,7 @@ def index():
     </section>
 
 '''
-    # Discord and newsletter callouts, </main> and the More from Protomota block come from the template.
+    # Discord and newsletter callouts, </main> and the More from Project ATOM block come from the template.
     h += footer(family=True)
     write("index.html", h)
 
@@ -432,7 +428,7 @@ WHATS_NEW = [("Dashboards", "An overview of every site and app, a page per site,
 
 def download():
     d = "Download Graphley for Mac. Free, signed and notarized, with automatic updates. Install it, sign in with Google and pick the sites to track."
-    graph = [webpage("/download/", "Download and install Graphley for Mac", d), crumbs("Download", "/download/"), APP, ORG, PERSON]
+    graph = [webpage("/download/", "Download and install Graphley for Mac", d), crumbs("Download", "/download/"), APP, ORG]
     rows = "\n".join(f'              <tr><td>{a}</td><td>{b}</td></tr>' for a, b in WHATS_NEW)
     h = head("/download/", "Download and install Graphley for Mac", d, graph) + header("/download/") + f'''  <main id="main">
     <div class="hero download-intro shell">
@@ -446,14 +442,14 @@ def download():
         <h2 id="download-support-title">Free software. <span>Shaped by people.</span></h2>
         <p class="support-copy">Every Graphley feature is free, with nothing to unlock. Report a bug, suggest a source, or tell us how Graphley is working for you.</p>
         <div class="support-actions">
-          <a class="button secondary" href="https://protomota.com/apps?app=graphley#feedback">{ICON_CHAT}Send Feedback <span aria-hidden="true">↗</span></a>
+          <a class="button secondary" href="https://projectatom.ai/apps?app=graphley#feedback">{ICON_CHAT}Send Feedback <span aria-hidden="true">↗</span></a>
         </div>
       </section>
 
       <div class="download-get">
         <a class="button download-button" href="{DMG}" download>{APPLE.replace('width="16" height="16"', 'width="20" height="20"')}<span>Download Graphley {rel("version")}</span></a>
         <p class="fineprint">macOS 14 or later · Version {rel("version")} (build {rel("build")}) · {rel("size")}</p>
-        <p class="fineprint">Signed by Protomota · Notarized by Apple · Signed automatic updates</p>
+        <p class="fineprint">Code signed · Notarized by Apple · Signed automatic updates</p>
       </div>
     </div>
 
@@ -483,7 +479,7 @@ def download():
           </tbody>
         </table>
       </div>
-      <p>The iPhone app and Home Screen widgets are coming. Follow along on the <a href="https://newsletter.protomota.com/">Protomota newsletter</a>.</p>
+      <p>The iPhone app and Home Screen widgets are coming. Follow along in <a href="https://discord.gg/FMfeU8cypS">our Discord</a>.</p>
     </section>
   </main>
 ''' + footer(status=False)
@@ -504,12 +500,12 @@ TOOLS = [("get_status", "Which accounts are connected, how many sites, apps and 
          ("record_followers · import_history", "Record a follower count for an account with no API, or bring in history from an older tracker."),
          ("list_reviews", "Written App Store reviews, with the day each was first seen."),
          ("export_backup", "The whole workspace and every stored number as one JSON file, for a backup. Keys are never included."),
-         ("setup_portfolio", "Loads the maker's own Protomota sites, apps and dashboards in one step, as a worked example.")]
+         ("setup_portfolio", "Loads an example set of sites, apps and dashboards in one step.")]
 
 
 def mcp():
     d = "How Graphley’s built-in MCP server lets Claude Code, Codex and Claude chat set up your sites, apps and dashboards."
-    graph = [webpage("/mcp/", "MCP setup · Graphley", d), crumbs("MCP setup", "/mcp/"), APP, ORG, PERSON]
+    graph = [webpage("/mcp/", "MCP setup · Graphley", d), crumbs("MCP setup", "/mcp/"), APP, ORG]
     tools = "\n".join(f'              <tr><td><code>{n}</code></td><td>{t}</td></tr>' for n, t in TOOLS)
     h = head("/mcp/", "MCP setup · Graphley", d, graph) + header("/mcp/") + f'''  <main id="main">
     <div class="shell page-head">
@@ -571,7 +567,7 @@ def mcp():
     write("mcp/index.html", h)
 
 
-FAQ = [("What is Graphley?", "Graphley is a free analytics app for Mac, made by Protomota. It puts every website and App Store app you run in one dashboard, using Google Analytics 4 and App Store Connect, with no Graphley server. Your AI agents can set it up through its built-in MCP server."),
+FAQ = [("What is Graphley?", "Graphley is a free analytics app for Mac, from Project ATOM. It puts every website and App Store app you run in one dashboard, using Google Analytics 4 and App Store Connect, with no Graphley server. Your AI agents can set it up through its built-in MCP server."),
        ("How do I get it?", "Download the signed and notarized disk image from graphley.ai/download, open it and drag Graphley into Applications. It needs macOS 14 or later."),
        ("Is it free?", "Yes. Graphley is free and source available, with no account, no trial and nothing to unlock."),
        ("How does it update?", "Graphley checks for new versions and installs signed updates automatically. You can also choose Check for Updates from the Graphley menu."),
@@ -585,7 +581,7 @@ def help_page():
     d = "Answers about Graphley for Mac: installing, updates, sources, privacy and agents, and how to reach us."
     faq = {"@type": "FAQPage", "@id": f"{SITE}/help/#faq", "url": f"{SITE}/help/",
            "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}
-    graph = [webpage("/help/", "Help · Graphley", d), faq, crumbs("Help", "/help/"), APP, ORG, PERSON]
+    graph = [webpage("/help/", "Help · Graphley", d), faq, crumbs("Help", "/help/"), APP, ORG]
     qa = "\n".join(f"          <h3>{q}</h3>\n          <p>{a}</p>" for q, a in FAQ)
     h = head("/help/", "Help · Graphley", d, graph) + header() + f'''  <main id="main">
     <div class="shell page-head">
@@ -606,7 +602,7 @@ def help_page():
         </section>
         <section id="contact">
           <h2>Get in touch</h2>
-          <p>Ask a question or tell us what you’d like Graphley to track in <a href="https://lab.protomota.com">our Discord</a>, or send feedback with <a href="https://protomota.com/apps?app=graphley#feedback">the Protomota apps form</a>.</p>
+          <p>Ask a question or tell us what you’d like Graphley to track in <a href="https://discord.gg/FMfeU8cypS">our Discord</a>, or send feedback with <a href="https://projectatom.ai/apps?app=graphley#feedback">our feedback form</a>.</p>
         </section>
       </div>
     </div>
@@ -622,13 +618,13 @@ def privacy():
     <div class="shell page-head">
       <span class="mark">privacy</span>
       <h1>Privacy</h1>
-      <p class="lead">Graphley is made by Protomota, LLC. Your numbers stay on your devices.</p>
+      <p class="lead">Graphley is a Project ATOM project. Your numbers stay on your devices.</p>
     </div>
     <div class="shell doc single">
       <div class="prose">
         <section>
           <h2>The app</h2>
-          <p>Graphley stores your workspace (the sites, apps and dashboards you set up) and the numbers it fetches on your Mac. It fetches them directly from Google Analytics and App Store Connect using your own sign-in and keys. Graphley has no server and no account, and sends nothing to Protomota.</p>
+          <p>Graphley stores your workspace (the sites, apps and dashboards you set up) and the numbers it fetches on your Mac. It fetches them directly from Google Analytics and App Store Connect using your own sign-in and keys. Graphley has no server and no account, and sends nothing to us.</p>
           <p>Sign-in tokens and keys are kept in the Keychain. If you use iCloud Keychain, they are available on your other Macs.</p>
           <p>To check for updates, Graphley downloads a small feed from graphley.ai. The request carries the app and macOS version, as any web request does, and no analytics data.</p>
         </section>
@@ -644,13 +640,13 @@ def privacy():
         <section>
           <h2 id="hosting">Where we host</h2>
           <p>This site runs on <a href="https://www.cloudflare.com/">Cloudflare</a>. Cloudflare serves every page and manages our traffic, so it handles standard request details such as your IP address and browser to deliver the site and protect it from abuse. Our images and downloads are stored in Cloudflare R2. Cloudflare handles that data under its <a href="https://www.cloudflare.com/privacypolicy/">privacy policy</a>.</p>
-          <p>We&rsquo;re not a Cloudflare sponsor. We chose them because we think they&rsquo;re the best value and the best service, and we&rsquo;ll keep using them for as long as that stays true. <a href="https://protomota.com/about#hosting">How we build and&nbsp;host</a></p>
+          <p>We&rsquo;re not a Cloudflare sponsor. We chose them because we think they&rsquo;re the best value and the best service, and we&rsquo;ll keep using them for as long as that stays true.</p>
         </section>
         <section>
           <h2>Website and support</h2>
           <p>The site provides information about Graphley. Hosting providers may process request information to deliver the site. If you contact us, we use the details you send to respond.</p>
           <p>If you click Allow analytics, the site loads Google Analytics, which sets cookies to count visits, page views and link clicks. Page addresses are sent without query strings, and advertising features are off. If you decline, Google Analytics does not load. Change your choice any time with Analytics settings in the footer.</p>
-          <p><a href="https://protomota.com/apps?app=graphley#feedback">Send Feedback</a></p>
+          <p><a href="https://projectatom.ai/apps?app=graphley#feedback">Send Feedback</a></p>
         </section>
       </div>
     </div>

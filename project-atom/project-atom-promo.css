@@ -1,5 +1,5 @@
-/* Project ATOM promo (Brad 2026-11-26): the one cause every Protomota site
-   promotes, always directly above the newsletter. Copied from protomota.com
+/* Project ATOM promo (2026-11-26): the one cause every one of our sites
+   promotes, always directly above the newsletter. Copied from the main site
    (components/redesign/Community.js ProjectAtom, .st-atom in styles/studio.css).
    Always dark, because the "atom." lockup is light on dark. Whole card is the link. */
 .pm-atom { display: block; max-width: 1180px; margin: 40px auto; box-sizing: border-box; }

@@ -1,4 +1,4 @@
-// Keeps every "© <year> Protomota" line on the current year without a redeploy.
+// Keeps every "© <year>" line on the current year without a redeploy.
 (function () {
   function run() {
     var y = String(new Date().getFullYear());

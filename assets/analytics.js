@@ -171,7 +171,7 @@
   //   mac_installer_download  the .dmg itself (the real download)
   //   download_click_mac      a "Download for Mac" button that leads to the download page
   //   app_store_click         this site's own App Store listing (data-app-store-id="<Apple ID>" on the script tag).
-  //                           Links to the other Protomota apps in the footer are not this site's downloads, so they
+  //                           Links to the other apps in the footer are not this site's downloads, so they
   //                           send nothing here (GA's own outbound click still records them).
   //   source_click, newsletter_click
   const ownStoreId = config.appStoreId || '';
@@ -203,7 +203,7 @@
     if (found) window.gtag('event', found[0], found[1]);
   });
 
-  // Detailed tracking (2026-11-24), the same events on every Protomota site so the dashboard reads them alike.
+  // Detailed tracking (2026-11-24), the same events on every one of our sites so the dashboard reads them alike.
   // Only sent for visitors who allowed analytics (send() returns false otherwise, and nothing is remembered).
   //   outbound_click  a link to another site: link_domain, link_url, link_text, link_section
   //   email_click     a mailto link: link_domain (the address's domain only), link_text, link_section
