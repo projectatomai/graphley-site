@@ -71,7 +71,7 @@ ICON_HOME = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke=
 ICON_HELP = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>'
 
 NAV = [("/#dashboards", "Dashboards", "nav-hide"), ("/#iphone", "iPhone", "nav-hide"), ("/#agents", "Agents", "nav-hide"), ("/mcp/", "MCP setup", "nav-hide-sm")]
-FOOT_NAV = [("/download/", "Download"), ("/mcp/", "MCP setup"), ("/help/", "Support"), ("/privacy/", "Privacy"),
+FOOT_NAV = [("/download/", "Download"), ("/mcp/", "MCP setup"), ("/help/", "Support"), ("/privacy/", "Privacy"), ("/terms/", "Terms"),
             ("https://projectatom.ai/", "Project ATOM"), ("https://projectatom.ai/apps?app=graphley#feedback", "Send Feedback")]
 
 
@@ -631,13 +631,13 @@ def privacy():
     <div class="shell page-head">
       <span class="mark">privacy</span>
       <h1>Privacy</h1>
-      <p class="lead">Graphley is a Project ATOM project. Your numbers stay on your devices.</p>
+      <p class="lead">Graphley is a Project ATOM project. Your numbers stay on your devices. Updated November 27, 2026.</p>
     </div>
     <div class="shell doc single">
       <div class="prose">
         <section>
           <h2>The app</h2>
-          <p>Graphley stores your workspace (the sites, apps and dashboards you set up) and the numbers it fetches on your Mac. It fetches them directly from Google Analytics and App Store Connect using your own sign-in and keys. Graphley has no server and no account, and sends nothing to us.</p>
+          <p>Graphley stores your workspace (the sites, apps and dashboards you set up) and the numbers it fetches on your Mac. It fetches them directly from the services you connect, using your own sign-in and keys: Google Analytics, Google Search Console, App Store Connect, Bing Webmaster Tools and Instagram. It also reads public App Store listings and public YouTube channel feeds for the apps and channels you add. Graphley has no server and no account, and sends nothing to us.</p>
           <p>Sign-in tokens and keys are kept in the Keychain. If you use iCloud Keychain, they are available on your other Macs.</p>
           <p>To check for updates, Graphley downloads a small feed from graphley.ai. The request carries the app and macOS version, as any web request does, and no analytics data.</p>
         </section>
@@ -655,17 +655,72 @@ def privacy():
           <p>This site runs on <a href="https://www.cloudflare.com/">Cloudflare</a>. Cloudflare serves every page and manages our traffic, so it handles standard request details such as your IP address and browser to deliver the site and protect it from abuse. Our images and downloads are stored in Cloudflare R2. Cloudflare handles that data under its <a href="https://www.cloudflare.com/privacypolicy/">privacy policy</a>.</p>
           <p>We&rsquo;re not a Cloudflare sponsor. We chose them because we think they&rsquo;re the best value and the best service, and we&rsquo;ll keep using them for as long as that stays true.</p>
         </section>
-        <section>
-          <h2>Website and support</h2>
-          <p>The site provides information about Graphley. Hosting providers may process request information to deliver the site. If you contact us, we use the details you send to respond.</p>
-          <p>If you click Allow analytics, the site loads Google Analytics, which sets cookies to count visits, page views and link clicks. Page addresses are sent without query strings, and advertising features are off. If you decline, Google Analytics does not load. Change your choice any time with Analytics settings in the footer.</p>
-          <p><a href="https://projectatom.ai/apps?app=graphley#feedback">Send Feedback</a></p>
+        <section id="website">
+          <h2>This website</h2>
+          <p>graphley.ai has no sign-up form and no account. If you click Allow analytics, the site loads Google Analytics, which sets cookies to count visits, page views and link clicks. Page addresses are sent without query strings, and advertising features are off. If you decline, Google Analytics does not load. Change your choice any time with Analytics settings in the footer.</p>
+        </section>
+        <section id="feedback">
+          <h2>Feedback and support</h2>
+          <p>Help and feedback for Graphley go through the <a href="https://projectatom.ai/apps?app=graphley#feedback">feedback form at projectatom.ai</a>. We receive the app you pick, your message and, only if you add it, your email address. The note is emailed to our team through Cloudflare Email. If you leave an email, we reply to it and keep it in our contact list (HubSpot) so we can follow up. If you leave it out, we can’t reply.</p>
+          <p>The app never sends a report on its own. Only what you type into the form is sent, so please leave private files and details out of it.</p>
+        </section>
+        <section id="contact">
+          <h2>Questions and changes</h2>
+          <p>We don’t sell your information, and we don’t use it for advertising. To ask what we hold, or to have it corrected or deleted, email <a href="mailto:hello@projectatom.ai">hello@projectatom.ai</a> or use the feedback form. We answer within 30 days.</p>
+          <p>If this page changes, the date at the top changes with it.</p>
         </section>
       </div>
     </div>
   </main>
 ''' + footer(status=False)
     write("privacy/index.html", h)
+
+
+def terms():
+    t = "Terms · Graphley"
+    d = "The terms for using Graphley, a free, public domain app from Project ATOM, and this website."
+    graph = [webpage("/terms/", t, d), crumbs("Terms", "/terms/"), ORG]
+    h = head("/terms/", t, d, graph) + header() + '''  <main id="main">
+    <div class="shell page-head">
+      <span class="mark">terms</span>
+      <h1>Terms</h1>
+      <p class="lead">Plain terms for a free app. Updated November 27, 2026.</p>
+    </div>
+    <div class="shell doc single">
+      <div class="prose">
+        <section>
+          <h2>Using Graphley</h2>
+          <p>Graphley is a free app from Project ATOM for Mac, iPhone and iPad. There is no account to make, nothing to buy and no ads. We share it as a signed download for Mac and through Apple’s TestFlight, and Apple’s own terms apply to anything you get through Apple. By using Graphley or this website, you agree to these terms.</p>
+        </section>
+        <section id="license">
+          <h2>Public domain</h2>
+          <p>Graphley’s code is free and open source, released into the public domain under the <a href="https://unlicense.org/">Unlicense</a>. Anyone may copy, change, share or sell it, for any purpose, without asking. We claim no copyright in it. Parts made by others, such as open source libraries, keep their own licenses.</p>
+        </section>
+        <section>
+          <h2>Your work is yours</h2>
+          <p>Your dashboards, settings and the numbers Graphley fetches for you belong to you. We don’t claim any rights in them, and using Graphley doesn’t give us any.</p>
+        </section>
+        <section>
+          <h2>Use it kindly</h2>
+          <p>Please don’t use Graphley to break the law, to harm, harass or deceive anyone, to send spam, or to get around the security of Graphley or any other service.</p>
+        </section>
+        <section>
+          <h2>Services you connect</h2>
+          <p>Some features work with services you choose, such as iCloud, Google Analytics, Search Console, App Store Connect, Bing Webmaster Tools, YouTube, Instagram or an AI agent on your Mac. Each of them has its own terms and privacy policy, and they apply when you use them through Graphley.</p>
+        </section>
+        <section>
+          <h2>No warranty</h2>
+          <p>We build Graphley with care, but it comes as is, with no warranty of any kind. We can’t promise it will always work, be available, or be free of mistakes. Numbers come from the services you connect, and they can be late or incomplete. To the fullest extent the law allows, we aren’t liable for any loss or damage that comes from using it, including lost data, so keep backups of anything that matters to you. Nothing here takes away rights the law gives you that can’t be waived.</p>
+        </section>
+        <section>
+          <h2>Changes and contact</h2>
+          <p>If these terms change, the date at the top changes with them. For questions, use the <a href="https://projectatom.ai/apps?app=graphley#feedback">feedback form</a> or email <a href="mailto:hello@projectatom.ai">hello@projectatom.ai</a>. Our <a href="/privacy/">privacy page</a> explains how Graphley handles information.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+''' + footer()
+    write("terms/index.html", h)
 
 
 def notfound():
@@ -682,5 +737,5 @@ def notfound():
     write("404.html", h)
 
 
-index(); download(); mcp(); help_page(); privacy(); notfound()
+index(); download(); mcp(); help_page(); privacy(); terms(); notfound()
 print("ok", REL)
