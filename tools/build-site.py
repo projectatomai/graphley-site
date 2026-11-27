@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Writes the graphley-site pages (index, download, mcp, help, privacy, 404) on the house app-site
 template, with one shared head, header and footer. tools/family.html is the template's home-page
-tail (Discord and newsletter callouts, </main>, the More from Project ATOM block), kept unchanged
+tail (community and newsletter callouts, </main>, the More from Project ATOM block), kept unchanged
 apart from the app name.
 
 The current release (version, build, size, SHA-256) is read back from the download page, so
@@ -411,7 +411,7 @@ def index():
     </section>
 
 '''
-    # Discord and newsletter callouts, </main> and the More from Project ATOM block come from the template.
+    # Community and newsletter callouts, </main> and the More from Project ATOM block come from the template.
     h += footer(family=True)
     write("index.html", h)
 
@@ -479,7 +479,7 @@ def download():
           </tbody>
         </table>
       </div>
-      <p>The iPhone app and Home Screen widgets are coming. Follow along in <a href="https://discord.gg/FMfeU8cypS">our Discord</a>.</p>
+      <p>The iPhone app and Home Screen widgets are coming. Check back at <a href="https://projectatom.ai/">projectatom.ai</a> for more information.</p>
     </section>
   </main>
 ''' + footer(status=False)
@@ -602,7 +602,7 @@ def help_page():
         </section>
         <section id="contact">
           <h2>Get in touch</h2>
-          <p>Ask a question or tell us what you’d like Graphley to track in <a href="https://discord.gg/FMfeU8cypS">our Discord</a>, or send feedback with <a href="https://projectatom.ai/apps?app=graphley#feedback">our feedback form</a>.</p>
+          <p>Ask a question or tell us what you’d like Graphley to track in <a href="https://projectatom.ai/apps?app=graphley#feedback">our Send feedback</a>, or send feedback with <a href="https://projectatom.ai/apps?app=graphley#feedback">our feedback form</a>.</p>
         </section>
       </div>
     </div>
